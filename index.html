@@ -49,6 +49,12 @@
   .row.header-row:hover { background:transparent; border-color:transparent; box-shadow:none; }
   .row.header-row .row-left { visibility:hidden; }
   .row.hidden { display:none; }
+  .paywall { text-align:center; padding:48px 20px; background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.95) 20%,#f8fafc 100%); border:2px dashed var(--border); border-radius:12px; margin:16px 0; position:relative; }
+  .paywall h3 { font-size:1.3em; color:#0f172a; margin-bottom:8px; }
+  .paywall p { color:var(--text2); margin-bottom:16px; font-size:.9em; }
+  .paywall .btn-big { display:inline-block; padding:12px 32px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:700; font-size:1em; margin:4px 8px; }
+  .paywall .btn-big.outline { background:#fff; color:var(--accent); border:2px solid var(--accent); }
+  .blur-rows { filter:blur(4px); pointer-events:none; user-select:none; opacity:.4; }
   .no-result { text-align:center; padding:40px; color:var(--text2); font-size:.9em; }
   /* Search Bar */
   .search-bar-wrap { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.97); backdrop-filter:blur(10px); padding:12px 20px 8px; border-bottom:1px solid var(--border); display:flex; flex-direction:column; gap:8px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,.04); }
@@ -3150,6 +3156,20 @@
         }
       });
 
-</script>
+
+	<script>
+	(function(){
+	  if (localStorage.getItem("recruitment_token")) return;
+	  var rows = document.querySelectorAll(".rows .row");
+	  for (var i = 15; i < rows.length; i++) rows[i].classList.add("hidden");
+	  var r15 = rows[14];
+	  if (r15) {
+	    var pw = document.createElement("div");
+	    pw.className = "paywall";
+	    pw.innerHTML = '<h3>🔒 查看更多招聘信息</h3><p>还有 <strong>' + (rows.length - 15) + ' 条</strong>招聘信息等你查看</p><a href="/登陆注册/register.html" class="btn-big">免费注册 · 1天试用</a><a href="/登陆注册/login.html" class="btn-big outline">已有账号？登录</a>';
+	    r15.parentNode.insertBefore(pw, r15.nextSibling);
+	  }
+	})();
+	</script>
 </body>
 </html>
