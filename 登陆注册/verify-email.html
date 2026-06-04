@@ -46,8 +46,8 @@ async function verify() {
 
 	  if (result.success) {
 	    if (result.data && result.data.token) {
-	      statusBox.innerHTML = '<div class="success-msg">✅ ' + result.message + '<br><br>正在跳转到完整信息页面...</div>';
-	      setTimeout(function(){ window.location.href = '/登陆注册/dashboard'; }, 2000);
+	      statusBox.innerHTML = '<div class="success-msg">✅ ' + result.message + '<br><br>认证成功！正在跳转到登录页...</div>';
+	      setTimeout(function(){ window.location.href = '/登陆注册/login'; }, 2000);
 	    } else {
 	      statusBox.innerHTML = '<div class="success-msg">✅ ' + result.message + '<br><br>正在跳转到登录页...</div>';
 	      setTimeout(function(){ window.location.href = '/登陆注册/login'; }, 2000);
