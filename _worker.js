@@ -224,18 +224,16 @@ async function register(request, env) {
     var normalizedEmail = email.toLowerCase().trim();
 
     var existing = await env.DB.prepare('SELECT id, email_verified FROM users WHERE email = ?').bind(normalizedEmail).first();
-    if (existing) {
-      if (existing.email_verified) return error('该邮箱已注册，请直接登录', 409, 'EMAIL_EXISTS');
-      await sendVerificationEmail(normalizedEmail, generateRandomToken(32), env);
-      return success({ email: normalizedEmail }, '验证邮件已重新发送，请检查邮箱');
-    }
+    if (existing) return error('该邮箱已注册，请直接登录', 409, 'EMAIL_EXISTS');
 
     var passwordHash = await hashPassword(password);
-    var verifyToken = generateRandomToken(32);
-    var verifyExpires = new Date(Date.now() + 86400000).toISOString();
-    await env.DB.prepare('INSERT INTO users (email, password_hash, email_verified, email_verify_token, email_verify_expires) VALUES (?, ?, 0, ?, ?)').bind(normalizedEmail, passwordHash, verifyToken, verifyExpires).run();
-    await sendVerificationEmail(normalizedEmail, verifyToken, env);
-    return success({ email: normalizedEmail }, '注册成功！请检查邮箱完成验证（如未收到请查看垃圾邮件）');
+    await env.DB.prepare('INSERT INTO users (email, password_hash, email_verified) VALUES (?, ?, 1)').bind(normalizedEmail, passwordHash).run();
+    var newUser = await env.DB.prepare('SELECT id FROM users WHERE email = ?').bind(normalizedEmail).first();
+    var th = parseInt(env.TRIAL_HOURS) || 24;
+    await createTrialSubscription(env.DB, newUser.id, th);
+    var loginToken = await generateToken({ userId: newUser.id, email: normalizedEmail }, env.JWT_SECRET || 'dev-secret-change-me', '7d');
+    var sub = await getSubscriptionStatus(env.DB, newUser.id);
+    return success({ token: loginToken, user: { id: newUser.id, email: normalizedEmail }, subscription: sub }, '注册成功！已开通试用');
   } catch (err) { console.error('Register error:', err); return error('注册失败，请稍后重试', 500); }
 }
 
@@ -250,10 +248,6 @@ async function login(request, env) {
     if (!user) return error('邮箱或密码错误', 401, 'INVALID_CREDENTIALS');
     var valid = await verifyPassword(password, user.password_hash);
     if (!valid) return error('邮箱或密码错误', 401, 'INVALID_CREDENTIALS');
-
-    if (!user.email_verified) {
-      return error('请先验证邮箱后再登录（验证邮件已发送）', 403, 'EMAIL_NOT_VERIFIED');
-    }
 
     await env.DB.prepare("UPDATE users SET last_login = datetime('now') WHERE id = ?").bind(user.id).run();
     var token = await generateToken({ userId: user.id, email: user.email }, env.JWT_SECRET || 'dev-secret-change-me', '7d');
