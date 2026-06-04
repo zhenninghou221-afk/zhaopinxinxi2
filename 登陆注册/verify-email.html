@@ -44,24 +44,15 @@ async function verify() {
 
   const result = await api.verifyEmail(token);
 
-  if (result.success) {
-    statusBox.innerHTML = `
-      <div class="success-msg">
-        ✅ ${result.message}<br><br>
-        正在跳转到完整信息页面...
-      </div>
-    `;
-    setTimeout(() => {
-      window.location.href = '/登陆注册/dashboard.html';
-    }, 2000);
-  } else {
-    statusBox.innerHTML = `
-      <div class="error-msg">
-        ❌ ${result.message}<br>
-        <a href="/登陆注册/register.html" class="btn-full primary" style="display:inline-block;margin-top:12px;text-decoration:none;">重新注册</a>
-      </div>
-    `;
-  }
+	  if (result.success) {
+	    if (result.data && result.data.token) {
+	      statusBox.innerHTML = '<div class="success-msg">✅ ' + result.message + '<br><br>正在跳转到完整信息页面...</div>';
+	      setTimeout(function(){ window.location.href = '/登陆注册/dashboard'; }, 2000);
+	    } else {
+	      statusBox.innerHTML = '<div class="success-msg">✅ ' + result.message + '<br><br>正在跳转到登录页...</div>';
+	      setTimeout(function(){ window.location.href = '/登陆注册/login'; }, 2000);
+	    }
+	  } else {
 }
 
 verify();
