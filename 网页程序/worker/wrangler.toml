@@ -18,8 +18,10 @@ bucket_name = "payment-proofs"
 TRIAL_HOURS = 24
 SUBSCRIPTION_DAYS = 90
 PRICE_CNY = 9.90
-# ADMIN_PASSWORD 已通过 wrangler secret 设置
+BASE_URL = "https://zhenningyu.top/登陆注册"
+RESEND_DOMAIN = "resend.dev"
 
-# For production, set secrets via: wrangler secret put <NAME>
-# JWT_SECRET
-# RESEND_API_KEY
+# Secrets (set via: wrangler secret put <NAME>)
+# JWT_SECRET  ✅ 已设置
+# RESEND_API_KEY  ← 待设置
+# ADMIN_PASSWORD  ← 待设置
