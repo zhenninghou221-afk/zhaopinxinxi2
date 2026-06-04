@@ -75,10 +75,15 @@ export const api = {
 
   // Auth endpoints
   async register(email, password) {
-    return this.request('/api/v1/auth/register', {
+    const result = await this.request('/api/v1/auth/register', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
+    if (result.success && result.data.token) {
+      this.setToken(result.data.token);
+      this.setUser(result.data.user);
+    }
+    return result;
   },
 
   async login(email, password) {

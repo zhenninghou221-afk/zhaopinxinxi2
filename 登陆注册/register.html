@@ -86,10 +86,10 @@ form.addEventListener('submit', async (e) => {
   const result = await api.register(email, password);
 
   if (result.success) {
-    successBox.textContent = result.message;
+    successBox.textContent = result.message + ' 正在跳转...';
     successBox.style.display = 'block';
     form.style.display = 'none';
-    document.querySelector('.alt-link').style.display = 'none';
+    setTimeout(function(){ window.location.href = '/登陆注册/dashboard'; }, 1500);
   } else {
     showError(result.message);
     submitBtn.disabled = false;

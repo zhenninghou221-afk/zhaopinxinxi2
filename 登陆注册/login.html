@@ -64,7 +64,7 @@ form.addEventListener('submit', async (e) => {
   const result = await api.login(email, password);
 
   if (result.success) {
-    window.location.href = '/登陆注册/dashboard.html';
+    window.location.href = '/登陆注册/dashboard';
   } else {
     showError(result.message);
     submitBtn.disabled = false;

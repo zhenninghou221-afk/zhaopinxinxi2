@@ -122,71 +122,81 @@
     <span class="search-result-count" id="resultCount">共 1086 条</span>
   </div>
   <div class="search-chips" id="searchChips">
-	    <!-- 第一行：地区 -->
-        <div class="search-chips-row" id="locRow1">
-          <span class="search-chip-cat">📍 地区</span>
+        <!-- 第一行：地区（可左右滑动） -->
+        <div class="search-chips-row loc-row">
+          <span class="search-chip-cat">📍</span>
           <span class="search-chip" data-cat="loc" onclick="chipClick(this,'北京')">北京</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'上海')">上海</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'深圳')">深圳</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'广州')">广州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'成都')">成都</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'杭州')">杭州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'武汉')">武汉</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南京')">南京</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'西安')">西安</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'苏州')">苏州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'重庆')">重庆</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'天津')">天津</span>
-          <span class="search-chip" onclick="toggleMoreCities()" id="moreCitiesBtn" style="color:#7c3aed;border-color:#7c3aed;font-weight:600;">更多城市 ▾</span>
-        </div>
-        <div class="search-chips-row" id="locRow2" style="display:none;flex-wrap:wrap;">
-          <span class="search-chip-cat"></span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'上海')">上海</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'深圳')">深圳</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'广州')">广州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'杭州')">杭州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'成都')">成都</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'武汉')">武汉</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南京')">南京</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'西安')">西安</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'重庆')">重庆</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'苏州')">苏州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'天津')">天津</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'长沙')">长沙</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'郑州')">郑州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'东莞')">东莞</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'青岛')">青岛</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'合肥')">合肥</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'宁波')">宁波</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'佛山')">佛山</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'厦门')">厦门</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'济南')">济南</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'大连')">大连</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'沈阳')">沈阳</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'昆明')">昆明</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'福州')">福州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'无锡')">无锡</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南宁')">南宁</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'长春')">长春</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'石家庄')">石家庄</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南昌')">南昌</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'太原')">太原</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'温州')">温州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'珠海')">珠海</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'海口')">海口</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'兰州')">兰州</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'哈尔滨')">哈尔滨</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'贵阳')">贵阳</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'银川')">银川</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'西宁')">西宁</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'三亚')">三亚</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'桂林')">桂林</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'香港')">香港</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'澳门')">澳门</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'台北')">台北</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'东京')">东京</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'新加坡')">新加坡</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'纽约')">纽约</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'伦敦')">伦敦</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'悉尼')">悉尼</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'迪拜')">迪拜</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'曼谷')">曼谷</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'首尔')">首尔</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'柏林')">柏林</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'巴黎')">巴黎</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'洛杉矶')">洛杉矶</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'波士顿')">波士顿</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'硅谷')">硅谷</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'加拿大')">加拿大</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'澳大利亚')">澳大利亚</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'德国')">德国</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'法国')">法国</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'日本')">日本</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'韩国')">韩国</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'印度')">印度</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'越南')">越南</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'泰国')">泰国</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'欧洲')">欧洲</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'美国')">美国</span>
+          <span class="search-chip" data-cat="loc" onclick="chipClick(this,'海外')">海外</span>
           <span class="search-chip" data-cat="loc" onclick="chipClick(this,'全国')">全国</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'香港')">香港</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'长沙')">长沙</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'厦门')">厦门</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'合肥')">合肥</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'美国')">美国</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'新加坡')">新加坡</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'德国')">德国</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'无锡')">无锡</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'沈阳')">沈阳</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'宁波')">宁波</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'海外')">海外</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'青岛')">青岛</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'东莞')">东莞</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'常州')">常州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'大连')">大连</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'日本')">日本</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'济南')">济南</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'越南')">越南</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'昆明')">昆明</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'珠海')">珠海</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'佛山')">佛山</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'郑州')">郑州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'印度')">印度</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'嘉兴')">嘉兴</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'硅谷')">硅谷</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'全国各省市')">全国各省市</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南通')">南通</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'泉州')">泉州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'南昌')">南昌</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'印尼')">印尼</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'惠州')">惠州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'贵阳')">贵阳</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'全国各省')">全国各省</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'昆山')">昆山</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'福州')">福州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'威海')">威海</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'温州')">温州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'湖州')">湖州</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'烟台')">烟台</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'连云港')">连云港</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'东京')">东京</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'包头')">包头</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'德阳')">德阳</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'泰国')">泰国</span>
-        <span class="search-chip" data-cat="loc" onclick="chipClick(this,'淄博')">淄博</span>
+        </div>
+
         <span class="search-chip" data-cat="loc" onclick="chipClick(this,'纽约')">纽约</span>
         <span class="search-chip" data-cat="loc" onclick="chipClick(this,'英国')">英国</span>
         <span class="search-chip" data-cat="loc" onclick="chipClick(this,'镇江')">镇江</span>
@@ -469,25 +479,37 @@
         <span class="search-chip" data-cat="loc" onclick="chipClick(this,'龙口')">龙口</span>
         <span class="search-chip" data-cat="loc" onclick="chipClick(this,'龙江')">龙江</span>
         </div>
-	    <!-- 第二行：岗位/行业 -->
-	    <div class="search-chips-row">
-	      <span class="search-chip-cat">💼 岗位</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'AI/大模型')">🤖 AI/大模型</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'算法')">🧮 算法</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'芯片')">💾 芯片</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'产品')">📦 产品</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'自动驾驶')">🚗 自动驾驶</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'金融/银行')">🏦 金融/银行</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'快消')">🛍️ 快消</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'新能源')">⚡ 新能源</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'医药')">🏥 医药</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'游戏')">🎮 游戏</span>
-	      <span class="search-chip" data-cat="job" onclick="chipClick(this,'国企/央企')">🏛️ 国企/央企</span>
-	    </div>
-	    
-	  </div>
-	  <div class="search-summary"</div>
-	  <div class="search-summary" id="searchSummary" style="display:none;">
+
+        <!-- 第二行：岗位（可左右滑动） -->
+        <div class="search-chips-row job-row">
+          <span class="search-chip-cat">💼</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'AI/大模型')">AI/大模型</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'算法')">算法</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'芯片/半导体')">芯片/半导体</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'后端开发')">后端开发</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'前端开发')">前端开发</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'移动开发')">移动开发</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'数据分析')">数据分析</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'产品经理')">产品经理</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'运营')">运营</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'自动驾驶')">自动驾驶</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'新能源')">新能源</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'金融/银行')">金融/银行</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'医药/医疗')">医药/医疗</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'游戏/互娱')">游戏/互娱</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'快消/零售')">快消/零售</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'国企/央企')">国企/央企</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'机器人')">机器人</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'云计算')">云计算</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'网络安全')">网络安全</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'嵌入式/IoT')">嵌入式/IoT</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'通信')">通信</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'生物科技')">生物科技</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'材料科学')">材料科学</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'机械制造')">机械制造</span>
+          <span class="search-chip" data-cat="job" onclick="chipClick(this,'航空航天')">航空航天</span>
+        </div>
+
 	    当前筛选：<span id="filterSummary"></span><span class="clear-link" onclick="clearSearch()">清除全部</span>
 	  </div>
 </div>

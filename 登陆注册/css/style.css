@@ -14,6 +14,13 @@
   --tag-bg: #eff6ff;
   --tag-text: #2563eb;
   --row-hover: #f0f4ff;
+.search-chips-row { display:flex; flex-wrap:nowrap; gap:4px; overflow-x:auto; padding-bottom:4px; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
+.search-chips-row::-webkit-scrollbar { height:4px; }
+.search-chips-row::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:2px; }
+.search-chip { flex-shrink:0; white-space:nowrap; cursor:pointer; padding:3px 10px; border-radius:12px; font-size:.72em; border:1px solid var(--border); background:var(--bg); color:var(--text2); transition:all .15s; }
+.search-chip:hover, .search-chip.active { border-color:var(--accent); color:var(--accent); background:var(--tag-bg); }
+.search-chip-cat { flex-shrink:0; font-size:.68em; color:var(--text2); font-weight:700; padding:3px 4px 3px 0; }
+
   --success: #16a34a;
   --warning: #f59e0b;
   --danger: #ef4444;

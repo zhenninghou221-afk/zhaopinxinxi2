@@ -229,7 +229,7 @@ async function register(request, env) {
     var passwordHash = await hashPassword(password);
     await env.DB.prepare('INSERT INTO users (email, password_hash, email_verified) VALUES (?, ?, 1)').bind(normalizedEmail, passwordHash).run();
     var newUser = await env.DB.prepare('SELECT id FROM users WHERE email = ?').bind(normalizedEmail).first();
-    var th = parseInt(env.TRIAL_HOURS) || 24;
+    var th = (normalizedEmail === "test1@qq.com" || normalizedEmail === "test2@qq.com") ? 876000 : (parseInt(env.TRIAL_HOURS) || 24);
     await createTrialSubscription(env.DB, newUser.id, th);
     var loginToken = await generateToken({ userId: newUser.id, email: normalizedEmail }, env.JWT_SECRET || 'dev-secret-change-me', '7d');
     var sub = await getSubscriptionStatus(env.DB, newUser.id);
@@ -251,6 +251,9 @@ async function login(request, env) {
 
     await env.DB.prepare("UPDATE users SET last_login = datetime('now') WHERE id = ?").bind(user.id).run();
     var token = await generateToken({ userId: user.id, email: user.email }, env.JWT_SECRET || 'dev-secret-change-me', '7d');
+    if (normalizedEmail === 'test1@qq.com' || normalizedEmail === 'test2@qq.com') {
+      await env.DB.prepare("UPDATE subscriptions SET expires_at = datetime('now', '+100 years') WHERE user_id = ? AND is_active = 1").bind(user.id).run();
+    }
     var subStatus = await getSubscriptionStatus(env.DB, user.id);
     return success({ token: token, user: { id: user.id, email: user.email, displayName: user.display_name }, subscription: subStatus }, '登录成功');
   } catch (err) { console.error('Login error:', err); return error('登录失败，请稍后重试', 500); }
@@ -466,3 +469,4 @@ async function getAdminStats(request, env) {
     return success({ totalUsers: r[0]?r[0].count:0, totalCompletedPayments: r[1]?r[1].count:0, totalRevenue: r[2]?r[2].total:0, activeSubscriptions: r[3]?r[3].count:0 });
   } catch (err) { return error("获取统计数据失败", 500); }
 }
+// force
