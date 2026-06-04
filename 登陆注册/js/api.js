@@ -5,7 +5,7 @@
 
 // Base URL for the Worker API
 // In production: set by Cloudflare Pages env or hardcode your Worker URL
-const API_BASE = window.API_BASE_URL || 'https://api.zhenningyu.top';
+const API_BASE = window.API_BASE_URL || '';
 
 // JWT Token management
 const TOKEN_KEY = 'recruitment_token';
