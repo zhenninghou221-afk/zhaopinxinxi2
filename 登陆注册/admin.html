@@ -42,11 +42,11 @@
 function logout() {
   localStorage.removeItem('recruitment_token');
   localStorage.removeItem('recruitment_user');
-  window.location.href = '/index.html';
+  window.location.href = '/';
 }
 </script>
 <script type="module">
-import { api } from '/js/api.js';
+import { api } from '/登陆注册/js/api.js';
 
 let adminPassword = '';
 

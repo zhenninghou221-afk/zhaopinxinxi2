@@ -78,7 +78,7 @@
 </div>
 
 <script type="module">
-import { api } from '/js/api.js';
+import { api } from '/登陆注册/js/api.js';
 // Re-init search/rendering from app.js by loading it too
 </script>
 <script type="module" src="/登陆注册/js/app.js"></script>
@@ -87,7 +87,7 @@ document.getElementById('logoutLink').addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.removeItem('recruitment_token');
   localStorage.removeItem('recruitment_user');
-  window.location.href = '/index.html';
+  window.location.href = '/';
 });
 </script>
 </body>

@@ -23,7 +23,7 @@
 </div>
 
 <script type="module">
-import { api } from '/js/api.js';
+import { api } from '/登陆注册/js/api.js';
 
 const statusBox = document.getElementById('statusBox');
 
@@ -52,7 +52,7 @@ async function verify() {
       </div>
     `;
     setTimeout(() => {
-      window.location.href = '/dashboard.html';
+      window.location.href = '/登陆注册/dashboard.html';
     }, 2000);
   } else {
     statusBox.innerHTML = `

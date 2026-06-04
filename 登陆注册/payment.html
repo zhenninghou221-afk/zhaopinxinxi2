@@ -84,11 +84,11 @@ document.getElementById('logoutLink').addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.removeItem('recruitment_token');
   localStorage.removeItem('recruitment_user');
-  window.location.href = '/index.html';
+  window.location.href = '/';
 });
 </script>
 <script type="module">
-import { api } from '/js/api.js';
+import { api } from '/登陆注册/js/api.js';
 
 let currentOrderId = null;
 
@@ -96,7 +96,7 @@ let currentOrderId = null;
 async function initPaymentPage() {
   // Check login
   if (!api.isLoggedIn()) {
-    window.location.href = '/login.html';
+    window.location.href = '/登陆注册/login.html';
     return;
   }
 
