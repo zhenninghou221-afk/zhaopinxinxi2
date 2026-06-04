@@ -1,0 +1,25 @@
+name = "recruitment-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "recruitment-db"
+database_id = "b68847cd-bdb6-4497-aee8-b6563dba3209"
+
+# R2 Bucket binding
+[[r2_buckets]]
+binding = "PAYMENT_BUCKET"
+bucket_name = "payment-proofs"
+
+# Environment variables
+[vars]
+TRIAL_HOURS = 24
+SUBSCRIPTION_DAYS = 90
+PRICE_CNY = 9.90
+# ADMIN_PASSWORD 已通过 wrangler secret 设置
+
+# For production, set secrets via: wrangler secret put <NAME>
+# JWT_SECRET
+# RESEND_API_KEY

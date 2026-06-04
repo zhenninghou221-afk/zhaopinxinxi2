@@ -1,0 +1,15 @@
+{
+  "name": "recruitment-api",
+  "version": "1.0.0",
+  "description": "Recruitment info API on Cloudflare Workers",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute recruitment-db --file=schema.sql",
+    "db:seed": "wrangler d1 execute recruitment-db --file=../data_migration/insert_companies.sql"
+  },
+  "dependencies": {
+    "jose": "^5.2.0"
+  }
+}

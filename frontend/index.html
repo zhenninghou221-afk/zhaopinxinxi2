@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027-2029届实习招聘信息汇总 — 招聘信息网</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav class="navbar">
+  <a href="/index.html" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/login.html">登录</a>
+    <a href="/register.html" class="btn-nav">免费注册</a>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <h1>🎯 2027–2029届 实习招聘信息大全</h1>
+  <p class="subtitle">覆盖23大行业 · 1000+企业 · 2026年暑期实习 · 持续更新</p>
+  <span class="update">📅 更新于 2026年6月4日 | 信息来源：企业官网、24365平台、高校就业网</span>
+  <div class="stats-row">
+    <div class="stat-item"><div class="num">1086+</div><div class="label">收录企业</div></div>
+    <div class="stat-item"><div class="num">1086</div><div class="label">招聘条目</div></div>
+    <div class="stat-item"><div class="num">15万+</div><div class="label">实习岗位</div></div>
+    <div class="stat-item"><div class="num">50%+</div><div class="label">平均转正率</div></div>
+  </div>
+</div>
+
+<!-- ═══════════ BANNER ═══════════ -->
+<div class="container">
+  <div class="banner preview">
+    👋 新用户<strong>注册即享1天免费试用</strong>，查看全部1086条完整招聘信息（含投递链接）
+    · <a href="/register.html">免费注册</a>
+    · <a href="/login.html">已有账号？登录</a>
+  </div>
+</div>
+
+<!-- ═══════════ SEARCH BAR ═══════════ -->
+<div class="search-bar-wrap" id="searchBar">
+  <div class="search-input-row">
+    <input type="text" id="searchInput" placeholder="🔍 输入公司名、城市、行业、岗位关键词筛选…" autofocus>
+    <span class="search-result-count" id="resultCount">加载中...</span>
+  </div>
+  <div class="search-chips" id="searchChips">
+    <div class="search-chips-row">
+      <span class="search-chip-cat">📍 地区</span>
+      <span class="search-chip" data-cat="loc">北京</span>
+      <span class="search-chip" data-cat="loc">上海</span>
+      <span class="search-chip" data-cat="loc">深圳</span>
+      <span class="search-chip" data-cat="loc">广州</span>
+      <span class="search-chip" data-cat="loc">成都</span>
+      <span class="search-chip" data-cat="loc">杭州</span>
+      <span class="search-chip" data-cat="loc">武汉</span>
+      <span class="search-chip" data-cat="loc">南京</span>
+    </div>
+    <div class="search-chips-row">
+      <span class="search-chip-cat">💼 岗位</span>
+      <span class="search-chip" data-cat="job">🤖 AI/大模型</span>
+      <span class="search-chip" data-cat="job">🧮 算法</span>
+      <span class="search-chip" data-cat="job">💾 芯片</span>
+      <span class="search-chip" data-cat="job">📦 产品</span>
+      <span class="search-chip" data-cat="job">🚗 自动驾驶</span>
+      <span class="search-chip" data-cat="job">🏦 金融/银行</span>
+      <span class="search-chip" data-cat="job">🛍️ 快消</span>
+      <span class="search-chip" data-cat="job">⚡ 新能源</span>
+      <span class="search-chip" data-cat="job">🏥 医药</span>
+      <span class="search-chip" data-cat="job">🎮 游戏</span>
+      <span class="search-chip" data-cat="job">🏛️ 国企/央企</span>
+    </div>
+    <div class="search-chips-row">
+      <span class="search-chip-cat">🏷️ 标签</span>
+      <span class="search-chip hot-chip" data-cat="tag">🔥热招中</span>
+      <span class="search-chip" data-cat="tag">✅可转正</span>
+      <span class="search-chip" onclick="clearAllFilters()" style="border-color:#ef4444;color:#dc2626;">✕ 清除</span>
+    </div>
+  </div>
+  <div class="search-summary" id="searchSummary" style="display:none;">
+    当前筛选：<span id="filterSummary"></span>
+    <span class="clear-link" onclick="clearAllFilters()">清除全部</span>
+  </div>
+</div>
+
+<!-- ═══════════ DATA ROWS ═══════════ -->
+<div class="container">
+  <div class="alert tips">
+    <h3>💡 使用说明</h3>
+    <p>① 每行是一家企业的完整招聘信息；② 📍橙色文字=工作城市；③ 标签：🔥=热招中/✅=可转正；④ <strong>注册即享1天免费试用</strong>，可查看完整岗位信息和投递链接；⑤ 使用搜索栏输入关键词快速筛选目标企业。</p>
+  </div>
+
+  <div class="rows">
+    <div class="row header-row">
+      <span class="row-num">#</span>
+      <span class="row-left">企业 / 工作地区</span>
+      <span class="row-info">面向对象 / 岗位方向</span>
+      <span class="row-actions">投递</span>
+    </div>
+    <div id="dataRows">
+      <div class="loading"><div class="loading-spinner"></div><p>加载中...</p></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📅 更新于 2026年6月4日 | 信息来源：企业官网·24365平台·高校就业网</p>
+    <p>⚠️ 投递前请在各企业官网确认最新信息 | <a href="#">↑ 返回顶部</a></p>
+  </div>
+</div>
+
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

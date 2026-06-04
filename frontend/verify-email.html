@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>验证邮箱 — 招聘信息网</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/index.html" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links"></div>
+</nav>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <h2>📧 验证邮箱</h2>
+    <div id="statusBox">
+      <div class="loading"><div class="loading-spinner"></div><p>正在验证...</p></div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/js/api.js';
+
+const statusBox = document.getElementById('statusBox');
+
+async function verify() {
+  // Get token from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token');
+
+  if (!token) {
+    statusBox.innerHTML = `
+      <div class="error-msg">
+        ❌ 验证链接无效。请检查邮件中的链接是否完整。<br>
+        <a href="/register.html" class="btn-full primary" style="display:inline-block;margin-top:12px;text-decoration:none;">重新注册</a>
+      </div>
+    `;
+    return;
+  }
+
+  const result = await api.verifyEmail(token);
+
+  if (result.success) {
+    statusBox.innerHTML = `
+      <div class="success-msg">
+        ✅ ${result.message}<br><br>
+        正在跳转到完整信息页面...
+      </div>
+    `;
+    setTimeout(() => {
+      window.location.href = '/dashboard.html';
+    }, 2000);
+  } else {
+    statusBox.innerHTML = `
+      <div class="error-msg">
+        ❌ ${result.message}<br>
+        <a href="/register.html" class="btn-full primary" style="display:inline-block;margin-top:12px;text-decoration:none;">重新注册</a>
+      </div>
+    `;
+  }
+}
+
+verify();
+</script>
+</body>
+</html>

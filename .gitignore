@@ -1,0 +1,19 @@
+# 备份文件
+*_backup*.html
+*_before*.html
+实习招聘信息汇总_*.html
+
+# 临时文件
+*.pyc
+__pycache__/
+
+# 依赖
+node_modules/
+.wrangler/
+
+# 敏感信息
+.env
+
+# 系统文件
+.DS_Store
+Thumbs.db

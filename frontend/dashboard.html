@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>完整招聘信息 — 招聘信息网</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/index.html" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/dashboard.html">📋 完整信息</a>
+    <a href="/payment.html">💳 订阅管理</a>
+    <a href="/index.html" id="logoutLink">退出</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>🎯 完整招聘信息</h1>
+  <p class="subtitle">全部1086条 · 包含完整岗位信息和投递链接</p>
+</div>
+
+<div class="container">
+  <div id="subBanner"></div>
+
+  <div class="search-bar-wrap">
+    <div class="search-input-row">
+      <input type="text" id="searchInput" placeholder="🔍 搜索企业、城市、岗位、行业…" autofocus>
+      <span class="search-result-count" id="resultCount">加载中...</span>
+    </div>
+    <div class="search-chips" id="searchChips">
+      <div class="search-chips-row">
+        <span class="search-chip-cat">📍 地区</span>
+        <span class="search-chip" data-cat="loc">北京</span>
+        <span class="search-chip" data-cat="loc">上海</span>
+        <span class="search-chip" data-cat="loc">深圳</span>
+        <span class="search-chip" data-cat="loc">广州</span>
+        <span class="search-chip" data-cat="loc">成都</span>
+        <span class="search-chip" data-cat="loc">杭州</span>
+        <span class="search-chip" data-cat="loc">武汉</span>
+        <span class="search-chip" data-cat="loc">南京</span>
+      </div>
+      <div class="search-chips-row">
+        <span class="search-chip-cat">💼 岗位</span>
+        <span class="search-chip" data-cat="job">🤖 AI/大模型</span>
+        <span class="search-chip" data-cat="job">🧮 算法</span>
+        <span class="search-chip" data-cat="job">💾 芯片</span>
+        <span class="search-chip" data-cat="job">📦 产品</span>
+        <span class="search-chip" data-cat="job">🚗 自动驾驶</span>
+        <span class="search-chip" data-cat="job">🏦 金融/银行</span>
+        <span class="search-chip" data-cat="job">🏛️ 国企/央企</span>
+        <span class="search-chip" onclick="window.clearAllFilters && window.clearAllFilters()" style="border-color:#ef4444;color:#dc2626;">✕ 清除</span>
+      </div>
+    </div>
+    <div class="search-summary" id="searchSummary" style="display:none;">
+      当前筛选：<span id="filterSummary"></span>
+      <span class="clear-link">清除全部</span>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="row header-row">
+      <span class="row-num">#</span>
+      <span class="row-left">企业 / 工作地区</span>
+      <span class="row-info">面向对象 / 岗位方向</span>
+      <span class="row-actions">投递</span>
+    </div>
+    <div id="dataRows">
+      <div class="loading"><div class="loading-spinner"></div><p>加载中...</p></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📅 更新于 2026年6月4日 | 订阅有效期内可查看全部完整信息</p>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/js/api.js';
+// Re-init search/rendering from app.js by loading it too
+</script>
+<script type="module" src="/js/app.js"></script>
+<script>
+document.getElementById('logoutLink').addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.removeItem('recruitment_token');
+  localStorage.removeItem('recruitment_user');
+  window.location.href = '/index.html';
+});
+</script>
+</body>
+</html>
