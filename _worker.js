@@ -210,7 +210,7 @@ async function getSubscriptionStatus(db, userId) {
 
 // ====== services/email.js ======
 async function sendVerificationEmail(to, token, env) {
-  const verifyUrl = `${env.BASE_URL || 'https://zhenningyu.top/登陆注册'}/verify-email.html?token=${token}`;
+  const verifyUrl = `${env.BASE_URL || 'https://zhenningyu.top/登陆注册'}/verify-email?token=${token}`;
   const html = `<div style="max-width:600px;margin:0 auto;font-family:Arial,sans-serif;"><h2 style="color:#2563eb;">📧 验证你的邮箱</h2><p>感谢注册招聘信息网！请点击下方按钮验证你的邮箱地址：</p><a href="${verifyUrl}" style="display:inline-block;padding:12px 24px;background:#2563eb;color:#fff;text-decoration:none;border-radius:6px;margin:16px 0;">验证邮箱</a><p style="color:#64748b;">或复制以下链接到浏览器：</p><p style="color:#64748b;word-break:break-all;">${verifyUrl}</p><p style="color:#94a3b8;font-size:12px;">此链接24小时内有效。注册后你将获得<strong>1天免费试用</strong>。</p></div>`;
   if (env.RESEND_API_KEY && env.RESEND_API_KEY !== 'your-resend-api-key') {
     try {
