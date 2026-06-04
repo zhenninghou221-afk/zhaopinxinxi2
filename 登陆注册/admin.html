@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>管理后台 — 招聘信息网</title>
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/登陆注册/css/style.css">
 </head>
 <body>
 
 <nav class="navbar">
-  <a href="/index.html" class="logo">🎯 招聘信息网 · 管理后台</a>
+  <a href="/" class="logo">🎯 招聘信息网 · 管理后台</a>
   <div class="nav-links">
-    <a href="/index.html">首页</a>
+    <a href="/">首页</a>
     <a href="#" onclick="logout()">退出</a>
   </div>
 </nav>
@@ -55,7 +55,7 @@ async function initAdmin() {
   const password = prompt('请输入管理员密码：');
   if (!password) {
     document.querySelector('.container').innerHTML =
-      '<div class="no-result" style="margin-top:60px;">需要管理员密码才能访问<br><a href="/index.html">返回首页</a></div>';
+      '<div class="no-result" style="margin-top:60px;">需要管理员密码才能访问<br><a href="/">返回首页</a></div>';
     return;
   }
 
@@ -65,7 +65,7 @@ async function initAdmin() {
   const statsResult = await api.adminGetStats(adminPassword);
   if (!statsResult || !statsResult.success) {
     document.querySelector('.container').innerHTML =
-      '<div class="no-result" style="margin-top:60px;">❌ 密码错误或无权访问<br><a href="/index.html">返回首页</a></div>';
+      '<div class="no-result" style="margin-top:60px;">❌ 密码错误或无权访问<br><a href="/">返回首页</a></div>';
     return;
   }
 

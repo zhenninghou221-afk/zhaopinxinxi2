@@ -62,7 +62,7 @@ export const api = {
 
       if (!response.ok && data.code === 'UNAUTHORIZED') {
         this.clearAuth();
-        window.location.href = '/login.html';
+        window.location.href = '/登陆注册/login.html';
         return null;
       }
 
@@ -109,7 +109,7 @@ export const api = {
 
   logout() {
     this.clearAuth();
-    window.location.href = '/index.html';
+    window.location.href = '/';
   },
 
   // Company data

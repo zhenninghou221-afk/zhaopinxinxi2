@@ -39,15 +39,15 @@ function initNavbar() {
   if (api.isLoggedIn()) {
     const user = api.user || {};
     navbarEl.innerHTML = `
-      <a href="/dashboard.html">📋 完整信息</a>
-      <a href="/payment.html">💳 订阅管理</a>
+      <a href="/登陆注册/dashboard.html">📋 完整信息</a>
+      <a href="/登陆注册/payment.html">💳 订阅管理</a>
       <span style="font-size:.78em;color:var(--text2);">${user.email || ''}</span>
       <a href="#" onclick="event.preventDefault();import('./api.js').then(m=>m.api.logout())">退出</a>
     `;
   } else {
     navbarEl.innerHTML = `
-      <a href="/login.html">登录</a>
-      <a href="/register.html" class="btn-nav">免费注册</a>
+      <a href="/登陆注册/login.html">登录</a>
+      <a href="/登陆注册/register.html" class="btn-nav">免费注册</a>
     `;
   }
 }
@@ -270,7 +270,7 @@ function renderRows(companies, isFull = false) {
             <span class="info-item masked-text">🔒 登录后查看完整信息</span>
           </span>
           <span class="row-actions">
-            <a class="btn-locked" href="/login.html">🔒 登录查看</a>
+            <a class="btn-locked" href="/登陆注册/login.html">🔒 登录查看</a>
             ${row.website_url ? `<a class="btn-outline" href="${escapeHtml(row.website_url)}" target="_blank" rel="noopener">${escapeHtml(row.website_text || '网址')}</a>` : ''}
           </span>
         </div>`;
@@ -314,7 +314,7 @@ async function loadPublicIndex() {
 
 async function loadDashboard() {
   if (!api.isLoggedIn()) {
-    window.location.href = '/login.html';
+    window.location.href = '/登陆注册/login.html';
     return;
   }
 
@@ -324,7 +324,7 @@ async function loadDashboard() {
     renderSubscriptionBanner(subResult.data);
     if (!subResult.data.hasAccess && subResult.data.status !== 'none') {
       // No access - redirect to payment
-      window.location.href = '/payment.html';
+      window.location.href = '/登陆注册/payment.html';
       return;
     }
   }
@@ -342,7 +342,7 @@ async function loadDashboard() {
     renderRows(filteredCompanies, true);
     updateResultCount();
   } else if (result.code === 'SUBSCRIPTION_REQUIRED') {
-    window.location.href = '/payment.html';
+    window.location.href = '/登陆注册/payment.html';
   } else {
     rowsContainer.innerHTML = `<div class="no-result">加载失败：${result.message}</div>`;
   }
@@ -353,21 +353,21 @@ function renderSubscriptionBanner(sub) {
   if (!bannerEl) return;
 
   if (sub.status === 'trial') {
-    bannerEl.innerHTML = `<div class="banner trial">🎁 免费试用中 · ${sub.remaining} · <a href="/payment.html">立即订阅（¥9.90/3个月）</a></div>`;
+    bannerEl.innerHTML = `<div class="banner trial">🎁 免费试用中 · ${sub.remaining} · <a href="/登陆注册/payment.html">立即订阅（¥9.90/3个月）</a></div>`;
   } else if (sub.status === 'active') {
-    bannerEl.innerHTML = `<div class="banner active">✅ 订阅有效 · ${sub.remaining} · <a href="/payment.html">续费叠加</a></div>`;
+    bannerEl.innerHTML = `<div class="banner active">✅ 订阅有效 · ${sub.remaining} · <a href="/登陆注册/payment.html">续费叠加</a></div>`;
   } else if (sub.status === 'trial_expired') {
-    bannerEl.innerHTML = `<div class="banner expired">⏰ 免费试用已过期 · <a href="/payment.html">立即订阅 ¥9.90/3个月</a></div>`;
+    bannerEl.innerHTML = `<div class="banner expired">⏰ 免费试用已过期 · <a href="/登陆注册/payment.html">立即订阅 ¥9.90/3个月</a></div>`;
   } else if (sub.status === 'expired') {
-    bannerEl.innerHTML = `<div class="banner expired">⏰ 订阅已过期 · <a href="/payment.html">续费 ¥9.90/3个月</a></div>`;
+    bannerEl.innerHTML = `<div class="banner expired">⏰ 订阅已过期 · <a href="/登陆注册/payment.html">续费 ¥9.90/3个月</a></div>`;
   } else {
-    bannerEl.innerHTML = `<div class="banner preview">👋 新用户注册即享<strong>1天免费试用</strong> · <a href="/register.html">免费注册</a></div>`;
+    bannerEl.innerHTML = `<div class="banner preview">👋 新用户注册即享<strong>1天免费试用</strong> · <a href="/登陆注册/register.html">免费注册</a></div>`;
   }
 }
 
 async function loadPaymentPage() {
   if (!api.isLoggedIn()) {
-    window.location.href = '/login.html';
+    window.location.href = '/登陆注册/login.html';
     return;
   }
 
