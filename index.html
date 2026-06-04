@@ -8,6 +8,12 @@
   :root { --bg:#ffffff; --card-bg:#ffffff; --text:#1a1a2e; --text2:#64748b; --accent:#2563eb; --accent2:#7c3aed; --border:#e2e8f0; --tag-bg:#eff6ff; --tag-text:#2563eb; --row-hover:#f0f4ff; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  .navbar { display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#fff; border-bottom:1px solid var(--border); }
+  .navbar .logo { font-weight:800; color:#0f172a; text-decoration:none; font-size:1em; }
+  .navbar .nav-links { display:flex; gap:12px; align-items:center; }
+  .navbar .nav-links a { color:var(--text2); text-decoration:none; font-size:.85em; }
+  .navbar .btn-nav { background:var(--accent); color:#fff!important; padding:6px 16px; border-radius:6px; font-weight:600; }
+  .navbar .btn-nav:hover { background:#1d4ed8; }
   .hero { background:#ffffff; padding:44px 20px; text-align:center; border-bottom:1px solid var(--border); }
   .hero h1 { font-size:2em; background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:6px; }
   .hero .subtitle { color:var(--text2); font-size:.95em; }
@@ -82,6 +88,13 @@
 </style>
 </head>
 <body>
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/登陆注册/login.html">登录</a>
+    <a href="/登陆注册/register.html" class="btn-nav">免费注册</a>
+  </div>
+</nav>
 
 <!-- ============ HERO ============ -->
 <div class="hero">
