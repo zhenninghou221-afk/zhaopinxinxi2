@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-40 -40 180 180%27><circle cx=%2750%27 cy=%2750%27 r=%2780%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2760%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2720%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%278%27 fill=%27%23ef4444%27/></svg>">
+<title>管理员登录 — 招聘信息网</title>
+<link rel="stylesheet" href="/auth/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="招聘信息">
+<meta name="theme-color" content="#2563eb">
+<!-- WeChat -->
+<meta itemprop="name" content="🎯 2027-2029届实习招聘信息大全">
+<meta itemprop="description" content="覆盖23大行业1000+企业暑期实习，含完整投递链接。新用户3天免费试用。">
+<meta itemprop="image" content="https://zhenningyu.top/og-image.png">
+<style>
+  .login-hint { text-align:center; color:var(--text2); font-size:.82em; margin-top:12px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/">🏠 首页</a>
+  </div>
+</nav>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <h2>⚙️ 管理员登录</h2>
+    <p class="sub">请输入管理员密码以访问后台</p>
+
+    <div id="errorMsg" class="error-msg" style="display:none;"></div>
+
+    <div class="form-group">
+      <label for="adminPassword">管理员密码</label>
+      <input type="password" id="adminPassword" placeholder="请输入管理员密码" autofocus>
+    </div>
+
+    <button class="btn-full primary" id="loginBtn">进入后台</button>
+    <p class="login-hint">← <a href="/">返回首页</a></p>
+  </div>
+</div>
+
+<script>
+document.getElementById('loginBtn').addEventListener('click', async () => {
+  const password = document.getElementById('adminPassword').value.trim();
+  const errorEl = document.getElementById('errorMsg');
+  const btn = document.getElementById('loginBtn');
+
+  if (!password) {
+    errorEl.textContent = '请输入管理员密码';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '验证中...';
+  errorEl.style.display = 'none';
+
+  try {
+    const API_BASE = window.API_BASE_URL || '';
+    const resp = await fetch(`${API_BASE}/api/v1/admin/stats`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Admin-Password': password,
+      },
+    });
+    const data = await resp.json();
+
+    if (data.success) {
+      sessionStorage.setItem('admin_password', password);
+      window.location.href = '/auth/admin.html';
+    } else {
+      errorEl.textContent = data.message || '密码错误';
+      errorEl.style.display = 'block';
+    }
+  } catch (e) {
+    errorEl.textContent = '网络错误，请重试';
+    errorEl.style.display = 'block';
+  }
+
+  btn.disabled = false;
+  btn.textContent = '进入后台';
+});
+
+// Enter key to submit
+document.getElementById('adminPassword').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') document.getElementById('loginBtn').click();
+});
+</script>
+
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js")</script>
+</body>
+</html>

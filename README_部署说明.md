@@ -99,11 +99,9 @@ wrangler pages deploy . --project-name=你的项目名
 ### 十一、准备收款码图片
 
 1. 打开支付宝 → 我的 → 收款 → 保存收款码
-2. 打开微信 → 我 → 收付款 → 二维码收款 → 保存收款码
-3. 将两张图片替换到 `frontend/images/` 目录：
+2. 将支付宝收款码图片替换到 `frontend/images/` 目录：
    - `alipay_qr.png` — 支付宝收款码
-   - `wechat_qr.png` — 微信收款码
-4. 重新部署前端
+3. 重新部署前端
 
 ### 十二、配置 Resend 邮件服务（可选）
 
@@ -150,7 +148,7 @@ npx serve .
 
 ## 需要你自己处理的事项
 
-- [ ] 准备支付宝/微信收款码图片
+- [ ] 准备支付宝收款码图片
 - [ ] 在 Cloudflare Dashboard 创建 D1 数据库
 - [ ] 在 Cloudflare Dashboard 创建 R2 存储桶
 - [ ] 配置 Resend 邮件服务（可选）

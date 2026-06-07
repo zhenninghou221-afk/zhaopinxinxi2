@@ -62,7 +62,7 @@ export const api = {
 
       if (!response.ok && data.code === 'UNAUTHORIZED') {
         this.clearAuth();
-        window.location.href = '/登陆注册/login.html';
+        window.location.href = '/auth/login.html';
         return null;
       }
 
@@ -74,10 +74,17 @@ export const api = {
   },
 
   // Auth endpoints
-  async register(email, password) {
+  async sendVerificationCode(email) {
+    return this.request('/api/v1/auth/send-code', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  },
+
+  async register(email, password, code) {
     const result = await this.request('/api/v1/auth/register', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password, code }),
     });
     if (result.success && result.data.token) {
       this.setToken(result.data.token);
@@ -96,6 +103,20 @@ export const api = {
       this.setUser(result.data.user);
     }
     return result;
+  },
+
+  async forgotPassword(email) {
+    return this.request('/api/v1/auth/forgot-password', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  },
+
+  async resetPassword(email, code, password) {
+    return this.request('/api/v1/auth/reset-password', {
+      method: 'POST',
+      body: JSON.stringify({ email, code, password }),
+    });
   },
 
   async verifyEmail(token) {
@@ -117,7 +138,7 @@ export const api = {
     window.location.href = '/';
   },
 
-  // Company data
+  // Company data — public endpoint supports ?limit=N&offset=N (max 200 per page)
   async getCompanies(params = {}) {
     const query = new URLSearchParams(params).toString();
     return this.request(`/api/v1/companies/all${query ? '?' + query : ''}`);
@@ -144,6 +165,21 @@ export const api = {
   // Payment
   async createOrder() {
     return this.request('/api/v1/payment/create-order', { method: 'POST' });
+  },
+
+  async queryPaymentStatus(orderId) {
+    return this.request(`/api/v1/payment/query?orderId=${encodeURIComponent(orderId)}`);
+  },
+
+  async selfConfirm(orderId) {
+    return this.request('/api/v1/payment/self-confirm', {
+      method: 'POST',
+      body: JSON.stringify({ orderId }),
+    });
+  },
+
+  async getPaymentConfigStatus() {
+    return this.request('/api/v1/payment/config-status');
   },
 
   async uploadProof(orderId, file) {
@@ -194,4 +230,17 @@ export const api = {
       },
     }).then(r => r.json()).catch(() => ({ success: false, message: '网络错误' }));
   },
+
+  // Favorites
+  async toggleFavorite(companyId) {
+    return this.request('/api/v1/favorites/toggle', {
+      method: 'POST',
+      body: JSON.stringify({ companyId }),
+    });
+  },
+
+  async listFavorites() {
+    return this.request('/api/v1/favorites/list');
+  },
+
 };

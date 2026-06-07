@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-40 -40 180 180%27><circle cx=%2750%27 cy=%2750%27 r=%2780%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2760%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2720%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%278%27 fill=%27%23ef4444%27/></svg>">
+<title>管理后台 — 招聘信息网</title>
+<link rel="stylesheet" href="/auth/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="招聘信息">
+<meta name="theme-color" content="#2563eb">
+<!-- WeChat -->
+<meta itemprop="name" content="🎯 2027-2029届实习招聘信息大全">
+<meta itemprop="description" content="覆盖23大行业1000+企业暑期实习，含完整投递链接。新用户3天免费试用。">
+<meta itemprop="image" content="https://zhenningyu.top/og-image.png">
+<style>
+  .analytics-table { width:100%; border-collapse:collapse; font-size:.85em; margin-top:8px; }
+  .analytics-table th { background:#f1f5f9; padding:8px; text-align:left; border-bottom:2px solid #cbd5e1; }
+  .analytics-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
+  .analytics-table .bar { display:inline-block; height:14px; background:var(--accent); border-radius:3px; min-width:2px; }
+  .hour-bar { display:flex; gap:1px; align-items:flex-end; height:60px; margin-top:8px; }
+  .hour-bar span { flex:1; background:var(--accent); border-radius:2px 2px 0 0; min-height:2px; }
+  .analytics-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+  @media (max-width:700px) { .analytics-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网 · 管理后台</a>
+  <div class="nav-links">
+    <a href="/">首页</a>
+    <a href="#" onclick="logout()">退出</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 style="margin-top:20px;text-align:center;">🔧 管理员后台</h2>
+
+  <!-- Stats -->
+  <div class="admin-section">
+    <div class="admin-stats" id="adminStats">
+      <div class="admin-stat-card"><div class="num">-</div><div class="label">注册用户</div></div>
+      <div class="admin-stat-card"><div class="num">-</div><div class="label">活跃订阅</div></div>
+      <div class="admin-stat-card"><div class="num">-</div><div class="label">完成付款</div></div>
+      <div class="admin-stat-card"><div class="num">-</div><div class="label">总收入</div></div>
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <div class="admin-section" id="analyticsSection" style="display:none;">
+    <h3 style="margin-bottom:12px;">📊 今日数据统计</h3>
+    <div class="admin-stats" id="analyticsStats">
+      <div class="admin-stat-card"><div class="num" id="aPV">-</div><div class="label">今日浏览量</div></div>
+      <div class="admin-stat-card"><div class="num" id="aClick">-</div><div class="label">今日点击</div></div>
+      <div class="admin-stat-card"><div class="num" id="aTotalPV">-</div><div class="label">累计浏览</div></div>
+      <div class="admin-stat-card"><div class="num" id="aTotalClick">-</div><div class="label">累计点击</div></div>
+    </div>
+
+    <!-- Hourly traffic bar -->
+    <h4 style="margin:16px 0 4px;">⏰ 今日各时段访问量</h4>
+    <div class="hour-bar" id="hourlyBar"></div>
+
+    <div class="analytics-grid">
+      <div>
+        <h4>🔍 今日热门搜索</h4>
+        <table class="analytics-table"><thead><tr><th>搜索词</th><th>次数</th></tr></thead>
+        <tbody id="topSearches"><tr><td colspan="2">加载中...</td></tr></tbody></table>
+      </div>
+      <div>
+        <h4>📨 今日热门点击</h4>
+        <table class="analytics-table"><thead><tr><th>公司</th><th>次数</th></tr></thead>
+        <tbody id="topClicks"><tr><td colspan="2">加载中...</td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notify Subscribers -->
+  <div class="admin-section">
+    <h3 style="margin-bottom:12px;">📢 通知订阅用户</h3>
+    <p style="color:var(--text2);font-size:.85em;margin-bottom:12px;">数据更新后，一键发邮件通知所有活跃订阅用户</p>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <input type="number" id="notifyCount" placeholder="新增企业数（可选）" min="0" style="padding:8px 12px;border:1px solid var(--border);border-radius:6px;width:150px;font-size:.85em;">
+      <input type="text" id="notifyMsg" placeholder="附加消息（可选）" maxlength="200" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-size:.85em;">
+      <button id="notifyBtn" class="btn-sm btn-approve" style="padding:9px 20px;font-size:.85em;">📢 发送通知</button>
+    </div>
+    <p id="notifyResult" style="margin-top:10px;font-size:.82em;color:var(--text2);"></p>
+  </div>
+
+  <!-- Pending Verifications -->
+  <div class="admin-section">
+    <h3 style="margin-bottom:12px;">⏳ 待审核付款</h3>
+    <div id="pendingPayments">
+      <div class="loading"><div class="loading-spinner"></div><p>加载中...</p></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function logout() {
+  sessionStorage.removeItem('admin_password');
+  localStorage.removeItem('recruitment_token');
+  localStorage.removeItem('recruitment_user');
+  window.location.href = '/';
+}
+</script>
+<script type="module">
+import { api } from '/auth/js/api.js';
+
+let adminPassword = '';
+
+async function initAdmin() {
+  // Check sessionStorage first (set by admin-login.html)
+  adminPassword = sessionStorage.getItem('admin_password');
+  if (!adminPassword) {
+    window.location.href = '/auth/admin-login.html';
+    return;
+  }
+
+  const statsResult = await api.adminGetStats(adminPassword);
+  if (!statsResult || !statsResult.success) {
+    sessionStorage.removeItem('admin_password');
+    window.location.href = '/auth/admin-login.html';
+    return;
+  }
+  renderStats(statsResult.data);
+  loadAnalytics();
+  loadPendingPayments();
+}
+
+function renderStats(s) {
+  document.getElementById('adminStats').innerHTML = `
+    <div class="admin-stat-card"><div class="num">${s.totalUsers}</div><div class="label">注册用户</div></div>
+    <div class="admin-stat-card"><div class="num">${s.activeSubscriptions}</div><div class="label">活跃订阅</div></div>
+    <div class="admin-stat-card"><div class="num">${s.totalCompletedPayments}</div><div class="label">完成付款</div></div>
+    <div class="admin-stat-card"><div class="num">${(s.totalRevenue || 0).toFixed(2)}</div><div class="label">总收入</div></div>
+  `;
+}
+
+async function loadAnalytics() {
+  const section = document.getElementById('analyticsSection');
+  if (!adminPassword) return;
+
+  try {
+    const resp = await fetch('/api/v1/admin/analytics', {
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Password': adminPassword }
+    });
+    const result = await resp.json();
+    if (!result.success) return;
+
+    const d = result.data;
+    section.style.display = 'block';
+    document.getElementById('aPV').textContent = d.todayPV;
+    document.getElementById('aClick').textContent = d.todayClicks;
+    document.getElementById('aTotalPV').textContent = d.totalPV;
+    document.getElementById('aTotalClick').textContent = d.totalClicks;
+
+    // Hourly bar
+    const hours = Array(24).fill(0);
+    (d.hourlyTraffic || []).forEach(h => { hours[parseInt(h.h)] = h.c; });
+    const maxH = Math.max(...hours, 1);
+    document.getElementById('hourlyBar').innerHTML = hours.map((c, i) =>
+      `<span style="height:${Math.max(c/maxH*100, 2)}%;" title="${i}:00 - ${c}次"></span>`
+    ).join('');
+
+    // Top searches
+    document.getElementById('topSearches').innerHTML = (d.topSearches || []).map(s =>
+      `<tr><td>${s.detail}</td><td>${s.c}</td></tr>`
+    ).join('') || '<tr><td colspan="2">暂无数据</td></tr>';
+
+    // Top clicks
+    const maxClick = Math.max(...(d.topClicks || []).map(c => c.c), 1);
+    document.getElementById('topClicks').innerHTML = (d.topClicks || []).map(c =>
+      `<tr><td>${c.detail} <span class="bar" style="width:${Math.max(c.c/maxClick*150, 5)}px;"></span></td><td>${c.c}</td></tr>`
+    ).join('') || '<tr><td colspan="2">暂无数据</td></tr>';
+
+  } catch(e) {}
+}
+
+async function loadPendingPayments() {
+  const container = document.getElementById('pendingPayments');
+  if (!adminPassword) return;
+  const result = await api.adminGetPendingPayments(adminPassword);
+  if (!result.success) {
+    container.innerHTML = `<div class="no-result">加载失败：${result.message}</div>`;
+    return;
+  }
+  const payments = result.data.payments;
+  if (!payments || payments.length === 0) {
+    container.innerHTML = '<div class="no-result">暂无待审核的付款</div>';
+    return;
+  }
+  container.innerHTML = payments.map(p => `
+    <div class="admin-payment-card">
+      <div class="info">
+        <strong>${p.user_email}</strong><br>
+        订单号：<code>${p.order_id}</code><br>
+        金额：${p.amount.toFixed(2)}<br>
+        时间：${p.created_at ? p.created_at.slice(0, 16).replace('T', ' ') : ''}
+      </div>
+      <div class="actions">
+        <button class="btn-sm btn-approve" onclick="handleVerify('${p.order_id}','approve')">确认收款</button>
+        <button class="btn-sm btn-reject" onclick="handleVerify('${p.order_id}','reject')">拒绝</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+window.handleVerify = async function(orderId, action) {
+  if (!adminPassword) return;
+  const label = action === 'approve' ? '确认收款' : '拒绝';
+  if (!confirm(label + '？ 订单：' + orderId)) return;
+  const result = await api.adminVerifyPayment(orderId, action, adminPassword);
+  alert(result.message);
+  if (result.success) {
+    const statsResult = await api.adminGetStats(adminPassword);
+    if (statsResult.success) renderStats(statsResult.data);
+    loadPendingPayments();
+  }
+};
+
+// ── Notify subscribers ──
+document.getElementById('notifyBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('notifyBtn');
+  const resultEl = document.getElementById('notifyResult');
+  if (!confirm('确定要给所有活跃订阅用户发送更新通知吗？')) return;
+
+  btn.disabled = true; btn.textContent = '发送中...';
+  resultEl.textContent = '';
+  const count = parseInt(document.getElementById('notifyCount').value) || 0;
+  const message = document.getElementById('notifyMsg').value.trim();
+
+  try {
+    const resp = await fetch('/api/v1/admin/notify-update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Password': adminPassword },
+      body: JSON.stringify({ count, message }),
+    });
+    const data = await resp.json();
+    if (data.success) {
+      resultEl.innerHTML = '<span style="color:#16a34a;">✅ ' + data.message + '</span>';
+    } else {
+      resultEl.innerHTML = '<span style="color:#ef4444;">❌ ' + data.message + '</span>';
+    }
+  } catch(e) {
+    resultEl.innerHTML = '<span style="color:#ef4444;">❌ 网络错误</span>';
+  }
+  btn.disabled = false; btn.textContent = '📢 发送通知';
+});
+
+initAdmin();
+</script>
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js")</script>
+</body>
+</html>

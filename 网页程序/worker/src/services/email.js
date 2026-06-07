@@ -12,7 +12,7 @@ export async function sendVerificationEmail(to, token, env) {
       <a href="${verifyUrl}" style="display:inline-block;padding:12px 24px;background:#2563eb;color:#fff;text-decoration:none;border-radius:6px;margin:16px 0;">验证邮箱</a>
       <p style="color:#64748b;">或复制以下链接到浏览器：</p>
       <p style="color:#64748b;word-break:break-all;">${verifyUrl}</p>
-      <p style="color:#94a3b8;font-size:12px;">此链接24小时内有效。注册后你将获得<strong>1天免费试用</strong>。</p>
+      <p style="color:#94a3b8;font-size:12px;">此链接24小时内有效。注册后你将获得<strong>3天免费试用</strong>。</p>
     </div>
   `;
 

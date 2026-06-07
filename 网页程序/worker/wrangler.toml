@@ -15,11 +15,19 @@ bucket_name = "payment-proofs"
 
 # Environment variables
 [vars]
-TRIAL_HOURS = 24
+TRIAL_HOURS = 72
 SUBSCRIPTION_DAYS = 90
 PRICE_CNY = 9.90
-BASE_URL = "https://zhenningyu.top/登陆注册"
+BASE_URL = "https://zhenningyu.top/auth"
 RESEND_DOMAIN = "resend.dev"
+
+# Alipay Face-to-Face Payment (当面付) configuration
+# Set these via: wrangler secret put <NAME>
+# ALIPAY_APP_ID       — from open.alipay.com
+# ALIPAY_PRIVATE_KEY  — your RSA256 PKCS#8 PEM private key
+# ALIPAY_PUBLIC_KEY   — Alipay's RSA256 public key (not the cert)
+# ALIPAY_NOTIFY_URL   — https://your-domain.com/api/v1/payment/alipay-notify
+# ALIPAY_SANDBOX      — set "1" for sandbox testing, remove for production
 
 # Secrets (set via: wrangler secret put <NAME>)
 # JWT_SECRET  ✅ 已设置

@@ -16,9 +16,14 @@ async function router(request, env, ctx) {
   const corsResponse = handleCors(request);
   if (corsResponse) return corsResponse;
 
-  // ──── Public Routes ────
+  // ──── Public Routes (no auth) ────
   if (method === 'GET' && path === '/api/v1/health') {
     return json({ status: 'ok', timestamp: new Date().toISOString() });
+  }
+
+  // Alipay async notification (called by Alipay servers, no auth)
+  if (method === 'POST' && path === '/api/v1/payment/alipay-notify') {
+    return paymentRoutes.alipayNotify(request, env);
   }
 
   if (method === 'POST' && path === '/api/v1/auth/register') {
@@ -97,8 +102,20 @@ async function router(request, env, ctx) {
     return paymentRoutes.uploadProof(request, env, userId);
   }
 
+  if (method === 'POST' && path === '/api/v1/payment/self-confirm') {
+    return paymentRoutes.selfConfirm(request, env, userId);
+  }
+
   if (method === 'GET' && path === '/api/v1/payment/orders') {
     return paymentRoutes.getOrders(request, env, userId);
+  }
+
+  if (method === 'GET' && path === '/api/v1/payment/config-status') {
+    return paymentRoutes.configStatus(request, env);
+  }
+
+  if (method === 'GET' && path === '/api/v1/payment/query') {
+    return paymentRoutes.queryPaymentStatus(request, env, userId);
   }
 
   return error('接口不存在', 404, 'NOT_FOUND');

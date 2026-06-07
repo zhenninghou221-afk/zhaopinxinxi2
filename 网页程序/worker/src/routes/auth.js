@@ -200,7 +200,7 @@ export async function verifyEmail(request, env) {
     return success({
       token: jwtToken,
       subscription: subStatus,
-    }, '邮箱验证成功！已自动开通1天免费试用');
+    }, '邮箱验证成功！已自动开通3天免费试用');
   } catch (err) {
     console.error('Verify email error:', err);
     return error('验证失败，请稍后重试', 500);

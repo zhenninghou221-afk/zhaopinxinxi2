@@ -1,0 +1,3075 @@
+[
+  {
+    "row_num": 1086,
+    "company_name": "中国核工业集团",
+    "locations": "北京",
+    "website_url": "https://cnnc.zhiye.com",
+    "website_text": "cnnc.zhiye.com"
+  },
+  {
+    "row_num": 1087,
+    "company_name": "中国石油天然气集团(CNPC)",
+    "locations": "北京",
+    "website_url": "https://www.cnpc.com.cn",
+    "website_text": "www.cnpc.com.cn"
+  },
+  {
+    "row_num": 1088,
+    "company_name": "中国石油化工集团(Sinopec)",
+    "locations": "北京",
+    "website_url": "https://job.sinopec.com",
+    "website_text": "job.sinopec.com"
+  },
+  {
+    "row_num": 1089,
+    "company_name": "中国海洋石油集团(CNOOC)",
+    "locations": "北京",
+    "website_url": "https://www.cnooc.com.cn",
+    "website_text": "www.cnooc.com.cn"
+  },
+  {
+    "row_num": 1090,
+    "company_name": "国家电网",
+    "locations": "北京",
+    "website_url": "https://www.sgcc.com.cn",
+    "website_text": "www.sgcc.com.cn"
+  },
+  {
+    "row_num": 1091,
+    "company_name": "中国南方电网",
+    "locations": "广州",
+    "website_url": "https://www.csg.cn",
+    "website_text": "www.csg.cn"
+  },
+  {
+    "row_num": 1092,
+    "company_name": "中国华能集团",
+    "locations": "北京",
+    "website_url": "https://www.chng.com.cn",
+    "website_text": "www.chng.com.cn"
+  },
+  {
+    "row_num": 1093,
+    "company_name": "中国华电集团",
+    "locations": "北京",
+    "website_url": "https://www.chd.com.cn",
+    "website_text": "www.chd.com.cn"
+  },
+  {
+    "row_num": 1094,
+    "company_name": "国家能源集团",
+    "locations": "北京",
+    "website_url": "https://www.ceic.com",
+    "website_text": "www.ceic.com"
+  },
+  {
+    "row_num": 1095,
+    "company_name": "国家电力投资集团",
+    "locations": "北京",
+    "website_url": "https://www.spic.com.cn",
+    "website_text": "www.spic.com.cn"
+  },
+  {
+    "row_num": 1096,
+    "company_name": "中国长江三峡集团",
+    "locations": "武汉/北京",
+    "website_url": "https://www.ctg.com.cn",
+    "website_text": "www.ctg.com.cn"
+  },
+  {
+    "row_num": 1097,
+    "company_name": "国家开发投资集团",
+    "locations": "北京",
+    "website_url": "https://www.sdic.com.cn",
+    "website_text": "www.sdic.com.cn"
+  },
+  {
+    "row_num": 1098,
+    "company_name": "华润集团",
+    "locations": "深圳/香港",
+    "website_url": "https://www.crc.com.cn",
+    "website_text": "www.crc.com.cn"
+  },
+  {
+    "row_num": 1099,
+    "company_name": "中国广核集团",
+    "locations": "深圳",
+    "website_url": "https://www.cgnpc.com.cn",
+    "website_text": "www.cgnpc.com.cn"
+  },
+  {
+    "row_num": 1100,
+    "company_name": "中国节能环保集团",
+    "locations": "北京",
+    "website_url": "https://www.cecep.cn",
+    "website_text": "www.cecep.cn"
+  },
+  {
+    "row_num": 1101,
+    "company_name": "中国电信",
+    "locations": "北京",
+    "website_url": "https://www.chinatelecom.com.cn",
+    "website_text": "www.chinatelecom.com.cn"
+  },
+  {
+    "row_num": 1102,
+    "company_name": "中国移动",
+    "locations": "北京",
+    "website_url": "https://www.10086.cn",
+    "website_text": "www.10086.cn"
+  },
+  {
+    "row_num": 1103,
+    "company_name": "中国联通",
+    "locations": "北京",
+    "website_url": "https://www.chinaunicom.com.cn",
+    "website_text": "www.chinaunicom.com.cn"
+  },
+  {
+    "row_num": 1104,
+    "company_name": "中国电子科技集团(CETC)",
+    "locations": "北京",
+    "website_url": "https://www.cetc.com.cn",
+    "website_text": "www.cetc.com.cn"
+  },
+  {
+    "row_num": 1105,
+    "company_name": "中国电子信息产业集团(CEC)",
+    "locations": "北京",
+    "website_url": "https://www.cec.com.cn",
+    "website_text": "www.cec.com.cn"
+  },
+  {
+    "row_num": 1106,
+    "company_name": "中国信科集团",
+    "locations": "武汉",
+    "website_url": "https://www.cict.com",
+    "website_text": "www.cict.com"
+  },
+  {
+    "row_num": 1107,
+    "company_name": "中国卫星网络集团",
+    "locations": "北京/雄安",
+    "website_url": "https://www.chinasatcom.com",
+    "website_text": "www.chinasatcom.com"
+  },
+  {
+    "row_num": 1108,
+    "company_name": "中国航天科技集团(CASC)",
+    "locations": "北京",
+    "website_url": "https://www.spacechina.com",
+    "website_text": "www.spacechina.com"
+  },
+  {
+    "row_num": 1109,
+    "company_name": "中国航天科工集团(CASIC)",
+    "locations": "北京",
+    "website_url": "https://www.casic.com.cn",
+    "website_text": "www.casic.com.cn"
+  },
+  {
+    "row_num": 1110,
+    "company_name": "中国航空工业集团(AVIC)",
+    "locations": "北京",
+    "website_url": "https://www.avic.com",
+    "website_text": "www.avic.com"
+  },
+  {
+    "row_num": 1111,
+    "company_name": "中国航空发动机集团",
+    "locations": "北京",
+    "website_url": "https://www.aecc.cn",
+    "website_text": "www.aecc.cn"
+  },
+  {
+    "row_num": 1112,
+    "company_name": "中国船舶集团(CSSC)",
+    "locations": "上海/北京",
+    "website_url": "https://www.cssc.net.cn",
+    "website_text": "www.cssc.net.cn"
+  },
+  {
+    "row_num": 1113,
+    "company_name": "中国兵器工业集团",
+    "locations": "北京",
+    "website_url": "https://www.norincogroup.com.cn",
+    "website_text": "www.norincogroup.com.cn"
+  },
+  {
+    "row_num": 1114,
+    "company_name": "中国兵器装备集团",
+    "locations": "北京",
+    "website_url": "https://www.csgc.com.cn",
+    "website_text": "www.csgc.com.cn"
+  },
+  {
+    "row_num": 1115,
+    "company_name": "中国电子科技集团",
+    "locations": "北京",
+    "website_url": "https://www.cetc.com.cn",
+    "website_text": "www.cetc.com.cn"
+  },
+  {
+    "row_num": 1116,
+    "company_name": "中国国家铁路集团",
+    "locations": "北京",
+    "website_url": "https://www.china-railway.com.cn",
+    "website_text": "www.china-railway.com.cn"
+  },
+  {
+    "row_num": 1117,
+    "company_name": "中国远洋海运集团(COSCO)",
+    "locations": "上海",
+    "website_url": "https://www.coscoshipping.com",
+    "website_text": "www.coscoshipping.com"
+  },
+  {
+    "row_num": 1118,
+    "company_name": "中国东方航空",
+    "locations": "上海",
+    "website_url": "https://www.ceair.com",
+    "website_text": "www.ceair.com"
+  },
+  {
+    "row_num": 1119,
+    "company_name": "中国南方航空",
+    "locations": "广州",
+    "website_url": "https://www.csair.com",
+    "website_text": "www.csair.com"
+  },
+  {
+    "row_num": 1120,
+    "company_name": "中国国际航空",
+    "locations": "北京",
+    "website_url": "https://www.airchina.com.cn",
+    "website_text": "www.airchina.com.cn"
+  },
+  {
+    "row_num": 1121,
+    "company_name": "中国物流集团",
+    "locations": "北京",
+    "website_url": "https://www.chinalogisticsgroup.com.cn",
+    "website_text": "www.chinalogisticsgroup.com.cn"
+  },
+  {
+    "row_num": 1122,
+    "company_name": "中国邮政集团",
+    "locations": "北京",
+    "website_url": "https://www.chinapost.com.cn",
+    "website_text": "www.chinapost.com.cn"
+  },
+  {
+    "row_num": 1123,
+    "company_name": "中国商用飞机(COMAC)",
+    "locations": "上海",
+    "website_url": "https://www.comac.cc",
+    "website_text": "www.comac.cc"
+  },
+  {
+    "row_num": 1124,
+    "company_name": "中国建筑集团(CSCEC)",
+    "locations": "北京",
+    "website_url": "https://www.cscec.com",
+    "website_text": "www.cscec.com"
+  },
+  {
+    "row_num": 1125,
+    "company_name": "中国中铁",
+    "locations": "北京",
+    "website_url": "https://www.crecg.com",
+    "website_text": "www.crecg.com"
+  },
+  {
+    "row_num": 1126,
+    "company_name": "中国铁建(CRCC)",
+    "locations": "北京",
+    "website_url": "https://www.crcc.cn",
+    "website_text": "www.crcc.cn"
+  },
+  {
+    "row_num": 1127,
+    "company_name": "中国交建(CCCC)",
+    "locations": "北京",
+    "website_url": "https://www.ccccltd.cn",
+    "website_text": "www.ccccltd.cn"
+  },
+  {
+    "row_num": 1128,
+    "company_name": "中国电建",
+    "locations": "北京",
+    "website_url": "https://www.powerchina.cn",
+    "website_text": "www.powerchina.cn"
+  },
+  {
+    "row_num": 1129,
+    "company_name": "中国能建",
+    "locations": "北京",
+    "website_url": "https://www.ceec.net.cn",
+    "website_text": "www.ceec.net.cn"
+  },
+  {
+    "row_num": 1130,
+    "company_name": "中国中冶(MCC)",
+    "locations": "北京",
+    "website_url": "https://www.mcc.com.cn",
+    "website_text": "www.mcc.com.cn"
+  },
+  {
+    "row_num": 1131,
+    "company_name": "中国化学工程集团",
+    "locations": "北京",
+    "website_url": "https://www.cncec.cn",
+    "website_text": "www.cncec.cn"
+  },
+  {
+    "row_num": 1132,
+    "company_name": "中国五矿集团",
+    "locations": "北京",
+    "website_url": "https://www.minmetals.com.cn",
+    "website_text": "www.minmetals.com.cn"
+  },
+  {
+    "row_num": 1133,
+    "company_name": "中国铝业集团",
+    "locations": "北京",
+    "website_url": "https://www.chalco.com.cn",
+    "website_text": "www.chalco.com.cn"
+  },
+  {
+    "row_num": 1134,
+    "company_name": "中国有色矿业集团",
+    "locations": "北京",
+    "website_url": "https://www.cnmc.com.cn",
+    "website_text": "www.cnmc.com.cn"
+  },
+  {
+    "row_num": 1135,
+    "company_name": "中国黄金集团",
+    "locations": "北京",
+    "website_url": "https://www.chinagoldgroup.com",
+    "website_text": "www.chinagoldgroup.com"
+  },
+  {
+    "row_num": 1136,
+    "company_name": "中国稀土集团",
+    "locations": "赣州",
+    "website_url": "https://www.creg.com.cn",
+    "website_text": "www.creg.com.cn"
+  },
+  {
+    "row_num": 1137,
+    "company_name": "中国矿产资源集团",
+    "locations": "雄安",
+    "website_url": "https://www.cmrag.com",
+    "website_text": "www.cmrag.com"
+  },
+  {
+    "row_num": 1138,
+    "company_name": "中国盐业集团",
+    "locations": "北京",
+    "website_url": "https://www.chinasalt.com.cn",
+    "website_text": "www.chinasalt.com.cn"
+  },
+  {
+    "row_num": 1139,
+    "company_name": "中国建材集团",
+    "locations": "北京",
+    "website_url": "https://www.cnbm.com.cn",
+    "website_text": "www.cnbm.com.cn"
+  },
+  {
+    "row_num": 1140,
+    "company_name": "中国一重",
+    "locations": "齐齐哈尔",
+    "website_url": "https://www.cfhi.com",
+    "website_text": "www.cfhi.com"
+  },
+  {
+    "row_num": 1141,
+    "company_name": "中国机械工业集团",
+    "locations": "北京",
+    "website_url": "https://www.sinomach.com.cn",
+    "website_text": "www.sinomach.com.cn"
+  },
+  {
+    "row_num": 1142,
+    "company_name": "东方电气集团",
+    "locations": "成都",
+    "website_url": "https://www.dongfang.com",
+    "website_text": "www.dongfang.com"
+  },
+  {
+    "row_num": 1143,
+    "company_name": "中国中车(CRRC)",
+    "locations": "北京",
+    "website_url": "https://www.crrcgc.cc",
+    "website_text": "www.crrcgc.cc"
+  },
+  {
+    "row_num": 1144,
+    "company_name": "中国一汽(FAW)",
+    "locations": "长春",
+    "website_url": "https://www.faw.com.cn",
+    "website_text": "www.faw.com.cn"
+  },
+  {
+    "row_num": 1145,
+    "company_name": "东风汽车集团",
+    "locations": "武汉",
+    "website_url": "https://www.dfmc.com.cn",
+    "website_text": "www.dfmc.com.cn"
+  },
+  {
+    "row_num": 1146,
+    "company_name": "中粮集团(COFCO)",
+    "locations": "北京",
+    "website_url": "https://www.cofco.com",
+    "website_text": "www.cofco.com"
+  },
+  {
+    "row_num": 1147,
+    "company_name": "中国农业发展集团",
+    "locations": "北京",
+    "website_url": "https://www.cnadc.com.cn",
+    "website_text": "www.cnadc.com.cn"
+  },
+  {
+    "row_num": 1148,
+    "company_name": "中国储备粮集团",
+    "locations": "北京",
+    "website_url": "https://www.sinograin.com.cn",
+    "website_text": "www.sinograin.com.cn"
+  },
+  {
+    "row_num": 1149,
+    "company_name": "中化集团(Sinochem)",
+    "locations": "北京",
+    "website_url": "https://www.sinochem.com",
+    "website_text": "www.sinochem.com"
+  },
+  {
+    "row_num": 1150,
+    "company_name": "中国林业集团",
+    "locations": "北京",
+    "website_url": "https://www.cfgc.cn",
+    "website_text": "www.cfgc.cn"
+  },
+  {
+    "row_num": 1151,
+    "company_name": "中国医药集团(Sinopharm)",
+    "locations": "北京",
+    "website_url": "https://www.sinopharm.com",
+    "website_text": "www.sinopharm.com"
+  },
+  {
+    "row_num": 1152,
+    "company_name": "华润医药集团",
+    "locations": "北京/香港",
+    "website_url": "https://www.crpharm.com",
+    "website_text": "www.crpharm.com"
+  },
+  {
+    "row_num": 1153,
+    "company_name": "中国投资有限责任公司",
+    "locations": "北京",
+    "website_url": "https://www.china-inv.cn",
+    "website_text": "www.china-inv.cn"
+  },
+  {
+    "row_num": 1154,
+    "company_name": "中国中信集团(CITIC)",
+    "locations": "北京",
+    "website_url": "https://www.citic.com",
+    "website_text": "www.citic.com"
+  },
+  {
+    "row_num": 1155,
+    "company_name": "中国光大集团",
+    "locations": "北京",
+    "website_url": "https://www.ebchina.com",
+    "website_text": "www.ebchina.com"
+  },
+  {
+    "row_num": 1156,
+    "company_name": "中国人民保险集团(PICC)",
+    "locations": "北京",
+    "website_url": "https://www.picc.com",
+    "website_text": "www.picc.com"
+  },
+  {
+    "row_num": 1157,
+    "company_name": "中国人寿保险集团",
+    "locations": "北京",
+    "website_url": "https://www.chinalife.com.cn",
+    "website_text": "www.chinalife.com.cn"
+  },
+  {
+    "row_num": 1158,
+    "company_name": "中国太平保险集团",
+    "locations": "香港/上海",
+    "website_url": "https://www.cntaiping.com",
+    "website_text": "www.cntaiping.com"
+  },
+  {
+    "row_num": 1159,
+    "company_name": "中国出口信用保险",
+    "locations": "北京",
+    "website_url": "https://www.sinosure.com.cn",
+    "website_text": "www.sinosure.com.cn"
+  },
+  {
+    "row_num": 1160,
+    "company_name": "中国信达资产",
+    "locations": "北京",
+    "website_url": "https://www.cinda.com.cn",
+    "website_text": "www.cinda.com.cn"
+  },
+  {
+    "row_num": 1161,
+    "company_name": "中国华融资产",
+    "locations": "北京",
+    "website_url": "https://www.chamc.com.cn",
+    "website_text": "www.chamc.com.cn"
+  },
+  {
+    "row_num": 1162,
+    "company_name": "中国东方资产",
+    "locations": "北京",
+    "website_url": "https://www.coamc.com.cn",
+    "website_text": "www.coamc.com.cn"
+  },
+  {
+    "row_num": 1163,
+    "company_name": "中国中化控股",
+    "locations": "北京",
+    "website_url": "https://www.sinochem.com",
+    "website_text": "www.sinochem.com"
+  },
+  {
+    "row_num": 1164,
+    "company_name": "招商局集团",
+    "locations": "香港/深圳",
+    "website_url": "https://www.cmhk.com",
+    "website_text": "www.cmhk.com"
+  },
+  {
+    "row_num": 1165,
+    "company_name": "中国旅游集团",
+    "locations": "香港/深圳",
+    "website_url": "https://www.ctg.cn",
+    "website_text": "www.ctg.cn"
+  },
+  {
+    "row_num": 1166,
+    "company_name": "中国绿发投资集团",
+    "locations": "北京",
+    "website_url": "https://www.cgdg.com",
+    "website_text": "www.cgdg.com"
+  },
+  {
+    "row_num": 1167,
+    "company_name": "中国检验认证集团",
+    "locations": "北京",
+    "website_url": "https://www.ccic.com",
+    "website_text": "www.ccic.com"
+  },
+  {
+    "row_num": 1168,
+    "company_name": "中国航空器材集团",
+    "locations": "北京",
+    "website_url": "https://www.casc.com.cn",
+    "website_text": "www.casc.com.cn"
+  },
+  {
+    "row_num": 1169,
+    "company_name": "中国煤炭地质总局",
+    "locations": "北京",
+    "website_url": "https://www.ccgc.cn",
+    "website_text": "www.ccgc.cn"
+  },
+  {
+    "row_num": 1170,
+    "company_name": "中国冶金地质总局",
+    "locations": "北京",
+    "website_url": "https://www.cmgb.com.cn",
+    "website_text": "www.cmgb.com.cn"
+  },
+  {
+    "row_num": 1171,
+    "company_name": "新兴际华集团",
+    "locations": "北京",
+    "website_url": "https://www.xxcig.com",
+    "website_text": "www.xxcig.com"
+  },
+  {
+    "row_num": 1172,
+    "company_name": "中国安能建设集团",
+    "locations": "北京",
+    "website_url": "https://www.china-anneng.com",
+    "website_text": "www.china-anneng.com"
+  },
+  {
+    "row_num": 1173,
+    "company_name": "南光集团",
+    "locations": "澳门",
+    "website_url": "https://www.namkwong.com.mo",
+    "website_text": "www.namkwong.com.mo"
+  },
+  {
+    "row_num": 1174,
+    "company_name": "中国融通集团",
+    "locations": "北京",
+    "website_url": "https://www.crtcg.com",
+    "website_text": "www.crtcg.com"
+  },
+  {
+    "row_num": 1175,
+    "company_name": "首钢集团",
+    "locations": "北京",
+    "website_url": "https://www.shougang.com.cn",
+    "website_text": "www.shougang.com.cn"
+  },
+  {
+    "row_num": 1176,
+    "company_name": "北汽集团(BAIC)",
+    "locations": "北京",
+    "website_url": "https://www.baicgroup.com.cn",
+    "website_text": "www.baicgroup.com.cn"
+  },
+  {
+    "row_num": 1177,
+    "company_name": "北京城建集团",
+    "locations": "北京",
+    "website_url": "https://www.bucg.com",
+    "website_text": "www.bucg.com"
+  },
+  {
+    "row_num": 1178,
+    "company_name": "北京金隅集团",
+    "locations": "北京",
+    "website_url": "https://www.bbmg.com.cn",
+    "website_text": "www.bbmg.com.cn"
+  },
+  {
+    "row_num": 1179,
+    "company_name": "北京银行",
+    "locations": "北京",
+    "website_url": "https://www.bankofbeijing.com.cn",
+    "website_text": "www.bankofbeijing.com.cn"
+  },
+  {
+    "row_num": 1180,
+    "company_name": "华夏银行",
+    "locations": "北京",
+    "website_url": "https://www.hxb.com.cn",
+    "website_text": "www.hxb.com.cn"
+  },
+  {
+    "row_num": 1181,
+    "company_name": "中关村发展集团",
+    "locations": "北京",
+    "website_url": "https://www.zgcgroup.com.cn",
+    "website_text": "www.zgcgroup.com.cn"
+  },
+  {
+    "row_num": 1182,
+    "company_name": "上汽集团(SAIC)",
+    "locations": "上海",
+    "website_url": "https://www.saicmotor.com",
+    "website_text": "www.saicmotor.com"
+  },
+  {
+    "row_num": 1183,
+    "company_name": "上海电气",
+    "locations": "上海",
+    "website_url": "https://www.shanghai-electric.com",
+    "website_text": "www.shanghai-electric.com"
+  },
+  {
+    "row_num": 1184,
+    "company_name": "上海建工",
+    "locations": "上海",
+    "website_url": "https://www.scg.com.cn",
+    "website_text": "www.scg.com.cn"
+  },
+  {
+    "row_num": 1185,
+    "company_name": "上海医药集团",
+    "locations": "上海",
+    "website_url": "https://www.sphchina.com",
+    "website_text": "www.sphchina.com"
+  },
+  {
+    "row_num": 1186,
+    "company_name": "上海银行",
+    "locations": "上海",
+    "website_url": "https://www.bosc.cn",
+    "website_text": "www.bosc.cn"
+  },
+  {
+    "row_num": 1187,
+    "company_name": "上海农商银行",
+    "locations": "上海",
+    "website_url": "https://www.shrcb.com",
+    "website_text": "www.shrcb.com"
+  },
+  {
+    "row_num": 1188,
+    "company_name": "上海机场集团",
+    "locations": "上海",
+    "website_url": "https://www.shanghaiairport.com",
+    "website_text": "www.shanghaiairport.com"
+  },
+  {
+    "row_num": 1189,
+    "company_name": "申通地铁集团",
+    "locations": "上海",
+    "website_url": "https://www.shmetro.com",
+    "website_text": "www.shmetro.com"
+  },
+  {
+    "row_num": 1190,
+    "company_name": "浦发银行(SPDB)",
+    "locations": "上海",
+    "website_url": "https://www.spdb.com.cn",
+    "website_text": "www.spdb.com.cn"
+  },
+  {
+    "row_num": 1191,
+    "company_name": "太平洋保险(CPIC)",
+    "locations": "上海",
+    "website_url": "https://www.cpic.com.cn",
+    "website_text": "www.cpic.com.cn"
+  },
+  {
+    "row_num": 1192,
+    "company_name": "国泰君安证券",
+    "locations": "上海",
+    "website_url": "https://www.gtja.com",
+    "website_text": "www.gtja.com"
+  },
+  {
+    "row_num": 1193,
+    "company_name": "海通证券",
+    "locations": "上海",
+    "website_url": "https://www.htsec.com",
+    "website_text": "www.htsec.com"
+  },
+  {
+    "row_num": 1194,
+    "company_name": "上海华谊集团",
+    "locations": "上海",
+    "website_url": "https://www.shhuayi.com",
+    "website_text": "www.shhuayi.com"
+  },
+  {
+    "row_num": 1195,
+    "company_name": "锦江国际集团",
+    "locations": "上海",
+    "website_url": "https://www.jinjiang.com",
+    "website_text": "www.jinjiang.com"
+  },
+  {
+    "row_num": 1196,
+    "company_name": "百联集团",
+    "locations": "上海",
+    "website_url": "https://www.bailiangroup.cn",
+    "website_text": "www.bailiangroup.cn"
+  },
+  {
+    "row_num": 1197,
+    "company_name": "光明食品集团",
+    "locations": "上海",
+    "website_url": "https://www.brightfood.com",
+    "website_text": "www.brightfood.com"
+  },
+  {
+    "row_num": 1198,
+    "company_name": "广汽集团(GAC)",
+    "locations": "广州",
+    "website_url": "https://www.gac.com.cn",
+    "website_text": "www.gac.com.cn"
+  },
+  {
+    "row_num": 1199,
+    "company_name": "越秀集团",
+    "locations": "广州/香港",
+    "website_url": "https://www.yuexiu.com",
+    "website_text": "www.yuexiu.com"
+  },
+  {
+    "row_num": 1200,
+    "company_name": "广州地铁",
+    "locations": "广州",
+    "website_url": "https://www.gzmtr.com",
+    "website_text": "www.gzmtr.com"
+  },
+  {
+    "row_num": 1201,
+    "company_name": "深圳地铁",
+    "locations": "深圳",
+    "website_url": "https://www.szmc.net",
+    "website_text": "www.szmc.net"
+  },
+  {
+    "row_num": 1202,
+    "company_name": "深业集团",
+    "locations": "深圳",
+    "website_url": "https://www.shumyip.com.hk",
+    "website_text": "www.shumyip.com.hk"
+  },
+  {
+    "row_num": 1203,
+    "company_name": "深圳能源集团",
+    "locations": "深圳",
+    "website_url": "https://www.sec.com.cn",
+    "website_text": "www.sec.com.cn"
+  },
+  {
+    "row_num": 1204,
+    "company_name": "深圳燃气集团",
+    "locations": "深圳",
+    "website_url": "https://www.szgas.com.cn",
+    "website_text": "www.szgas.com.cn"
+  },
+  {
+    "row_num": 1205,
+    "company_name": "珠海格力集团",
+    "locations": "珠海",
+    "website_url": "https://www.gree.com",
+    "website_text": "www.gree.com"
+  },
+  {
+    "row_num": 1206,
+    "company_name": "珠海华发集团",
+    "locations": "珠海",
+    "website_url": "https://www.cnhuafag.com",
+    "website_text": "www.cnhuafag.com"
+  },
+  {
+    "row_num": 1207,
+    "company_name": "东莞银行",
+    "locations": "东莞",
+    "website_url": "https://www.dongguanbank.cn",
+    "website_text": "www.dongguanbank.cn"
+  },
+  {
+    "row_num": 1208,
+    "company_name": "江苏银行",
+    "locations": "南京",
+    "website_url": "https://www.jsbchina.cn",
+    "website_text": "www.jsbchina.cn"
+  },
+  {
+    "row_num": 1209,
+    "company_name": "南京银行",
+    "locations": "南京",
+    "website_url": "https://www.njcb.com.cn",
+    "website_text": "www.njcb.com.cn"
+  },
+  {
+    "row_num": 1210,
+    "company_name": "苏州银行",
+    "locations": "苏州",
+    "website_url": "https://www.suzhoubank.com",
+    "website_text": "www.suzhoubank.com"
+  },
+  {
+    "row_num": 1211,
+    "company_name": "徐工集团(XCMG)",
+    "locations": "徐州",
+    "website_url": "https://www.xcmg.com",
+    "website_text": "www.xcmg.com"
+  },
+  {
+    "row_num": 1212,
+    "company_name": "无锡产业发展集团",
+    "locations": "无锡",
+    "website_url": "https://www.wxidg.com",
+    "website_text": "www.wxidg.com"
+  },
+  {
+    "row_num": 1213,
+    "company_name": "苏州工业园区",
+    "locations": "苏州",
+    "website_url": "https://www.sipac.gov.cn",
+    "website_text": "www.sipac.gov.cn"
+  },
+  {
+    "row_num": 1214,
+    "company_name": "江苏省国信集团",
+    "locations": "南京",
+    "website_url": "https://www.jsgx.net",
+    "website_text": "www.jsgx.net"
+  },
+  {
+    "row_num": 1215,
+    "company_name": "杭州钢铁集团",
+    "locations": "杭州",
+    "website_url": "https://www.hzsteel.com",
+    "website_text": "www.hzsteel.com"
+  },
+  {
+    "row_num": 1216,
+    "company_name": "杭州银行",
+    "locations": "杭州",
+    "website_url": "https://www.hzbank.com.cn",
+    "website_text": "www.hzbank.com.cn"
+  },
+  {
+    "row_num": 1217,
+    "company_name": "宁波银行",
+    "locations": "宁波",
+    "website_url": "https://www.nbcb.com.cn",
+    "website_text": "www.nbcb.com.cn"
+  },
+  {
+    "row_num": 1218,
+    "company_name": "物产中大集团",
+    "locations": "杭州",
+    "website_url": "https://www.wzgroup.cn",
+    "website_text": "www.wzgroup.cn"
+  },
+  {
+    "row_num": 1219,
+    "company_name": "浙江省能源集团",
+    "locations": "杭州",
+    "website_url": "https://www.zjenergy.com.cn",
+    "website_text": "www.zjenergy.com.cn"
+  },
+  {
+    "row_num": 1220,
+    "company_name": "浙江省交通集团",
+    "locations": "杭州",
+    "website_url": "https://www.cncico.com",
+    "website_text": "www.cncico.com"
+  },
+  {
+    "row_num": 1221,
+    "company_name": "横店集团",
+    "locations": "东阳",
+    "website_url": "https://www.hengdian.com",
+    "website_text": "www.hengdian.com"
+  },
+  {
+    "row_num": 1222,
+    "company_name": "山东能源集团",
+    "locations": "济南",
+    "website_url": "https://www.shandong-energy.com",
+    "website_text": "www.shandong-energy.com"
+  },
+  {
+    "row_num": 1223,
+    "company_name": "山东高速集团",
+    "locations": "济南",
+    "website_url": "https://www.sdhsg.com",
+    "website_text": "www.sdhsg.com"
+  },
+  {
+    "row_num": 1224,
+    "company_name": "青岛啤酒",
+    "locations": "青岛",
+    "website_url": "https://www.tsingtao.com.cn",
+    "website_text": "www.tsingtao.com.cn"
+  },
+  {
+    "row_num": 1225,
+    "company_name": "海尔集团(Haier)",
+    "locations": "青岛",
+    "website_url": "https://www.haier.com",
+    "website_text": "www.haier.com"
+  },
+  {
+    "row_num": 1226,
+    "company_name": "海信集团(Hisense)",
+    "locations": "青岛",
+    "website_url": "https://www.hisense.com",
+    "website_text": "www.hisense.com"
+  },
+  {
+    "row_num": 1227,
+    "company_name": "潍柴动力(Weichai)",
+    "locations": "潍坊",
+    "website_url": "https://www.weichaipower.com",
+    "website_text": "www.weichaipower.com"
+  },
+  {
+    "row_num": 1228,
+    "company_name": "万华化学",
+    "locations": "烟台",
+    "website_url": "https://www.whchem.com",
+    "website_text": "www.whchem.com"
+  },
+  {
+    "row_num": 1229,
+    "company_name": "厦门建发集团",
+    "locations": "厦门",
+    "website_url": "https://www.chinacdc.com",
+    "website_text": "www.chinacdc.com"
+  },
+  {
+    "row_num": 1230,
+    "company_name": "厦门国贸集团",
+    "locations": "厦门",
+    "website_url": "https://www.itg.com.cn",
+    "website_text": "www.itg.com.cn"
+  },
+  {
+    "row_num": 1231,
+    "company_name": "厦门象屿集团",
+    "locations": "厦门",
+    "website_url": "https://www.xiangyu-group.com",
+    "website_text": "www.xiangyu-group.com"
+  },
+  {
+    "row_num": 1232,
+    "company_name": "兴业银行(CIB)",
+    "locations": "福州",
+    "website_url": "https://www.cib.com.cn",
+    "website_text": "www.cib.com.cn"
+  },
+  {
+    "row_num": 1233,
+    "company_name": "厦门银行",
+    "locations": "厦门",
+    "website_url": "https://www.xmccb.com",
+    "website_text": "www.xmccb.com"
+  },
+  {
+    "row_num": 1234,
+    "company_name": "紫金矿业",
+    "locations": "龙岩/厦门",
+    "website_url": "https://www.zijinmining.com",
+    "website_text": "www.zijinmining.com"
+  },
+  {
+    "row_num": 1235,
+    "company_name": "宁德时代(CATL)",
+    "locations": "宁德",
+    "website_url": "https://www.catl.com",
+    "website_text": "www.catl.com"
+  },
+  {
+    "row_num": 1236,
+    "company_name": "福耀玻璃",
+    "locations": "福清",
+    "website_url": "https://www.fuyaogroup.com",
+    "website_text": "www.fuyaogroup.com"
+  },
+  {
+    "row_num": 1237,
+    "company_name": "成都银行",
+    "locations": "成都",
+    "website_url": "https://www.bocd.com.cn",
+    "website_text": "www.bocd.com.cn"
+  },
+  {
+    "row_num": 1238,
+    "company_name": "四川长虹",
+    "locations": "绵阳",
+    "website_url": "https://www.changhong.com",
+    "website_text": "www.changhong.com"
+  },
+  {
+    "row_num": 1239,
+    "company_name": "五粮液集团",
+    "locations": "宜宾",
+    "website_url": "https://www.wuliangye.com.cn",
+    "website_text": "www.wuliangye.com.cn"
+  },
+  {
+    "row_num": 1240,
+    "company_name": "泸州老窖",
+    "locations": "泸州",
+    "website_url": "https://www.lzlj.com",
+    "website_text": "www.lzlj.com"
+  },
+  {
+    "row_num": 1241,
+    "company_name": "新希望集团",
+    "locations": "成都",
+    "website_url": "https://www.newhopegroup.com",
+    "website_text": "www.newhopegroup.com"
+  },
+  {
+    "row_num": 1242,
+    "company_name": "通威集团",
+    "locations": "成都",
+    "website_url": "https://www.tongwei.com",
+    "website_text": "www.tongwei.com"
+  },
+  {
+    "row_num": 1243,
+    "company_name": "四川省投资集团",
+    "locations": "成都",
+    "website_url": "https://www.scig.com.cn",
+    "website_text": "www.scig.com.cn"
+  },
+  {
+    "row_num": 1244,
+    "company_name": "重庆长安汽车",
+    "locations": "重庆",
+    "website_url": "https://www.changan.com.cn",
+    "website_text": "www.changan.com.cn"
+  },
+  {
+    "row_num": 1245,
+    "company_name": "重庆银行",
+    "locations": "重庆",
+    "website_url": "https://www.cqcbank.com",
+    "website_text": "www.cqcbank.com"
+  },
+  {
+    "row_num": 1246,
+    "company_name": "湖北能源集团",
+    "locations": "武汉",
+    "website_url": "https://www.hbny.com.cn",
+    "website_text": "www.hbny.com.cn"
+  },
+  {
+    "row_num": 1247,
+    "company_name": "武汉地铁",
+    "locations": "武汉",
+    "website_url": "https://www.whrt.gov.cn",
+    "website_text": "www.whrt.gov.cn"
+  },
+  {
+    "row_num": 1248,
+    "company_name": "中联重科",
+    "locations": "长沙",
+    "website_url": "https://www.zoomlion.com",
+    "website_text": "www.zoomlion.com"
+  },
+  {
+    "row_num": 1249,
+    "company_name": "三一集团",
+    "locations": "长沙/北京",
+    "website_url": "https://www.sany.com.cn",
+    "website_text": "www.sany.com.cn"
+  },
+  {
+    "row_num": 1250,
+    "company_name": "湖南钢铁集团",
+    "locations": "长沙",
+    "website_url": "https://www.hnsteel.com",
+    "website_text": "www.hnsteel.com"
+  },
+  {
+    "row_num": 1251,
+    "company_name": "长沙银行",
+    "locations": "长沙",
+    "website_url": "https://www.bankofchangsha.com",
+    "website_text": "www.bankofchangsha.com"
+  },
+  {
+    "row_num": 1252,
+    "company_name": "郑州银行",
+    "locations": "郑州",
+    "website_url": "https://www.zzbank.cn",
+    "website_text": "www.zzbank.cn"
+  },
+  {
+    "row_num": 1253,
+    "company_name": "宇通集团",
+    "locations": "郑州",
+    "website_url": "https://www.yutong.com",
+    "website_text": "www.yutong.com"
+  },
+  {
+    "row_num": 1254,
+    "company_name": "河南能源化工集团",
+    "locations": "郑州",
+    "website_url": "https://www.hnecgc.com.cn",
+    "website_text": "www.hnecgc.com.cn"
+  },
+  {
+    "row_num": 1255,
+    "company_name": "河钢集团",
+    "locations": "石家庄",
+    "website_url": "https://www.hbisco.com",
+    "website_text": "www.hbisco.com"
+  },
+  {
+    "row_num": 1256,
+    "company_name": "河北港口集团",
+    "locations": "秦皇岛",
+    "website_url": "https://www.porthebei.com",
+    "website_text": "www.porthebei.com"
+  },
+  {
+    "row_num": 1257,
+    "company_name": "陕西煤业化工集团",
+    "locations": "西安",
+    "website_url": "https://www.shccig.com",
+    "website_text": "www.shccig.com"
+  },
+  {
+    "row_num": 1258,
+    "company_name": "延长石油集团",
+    "locations": "西安",
+    "website_url": "https://www.sxycpc.com",
+    "website_text": "www.sxycpc.com"
+  },
+  {
+    "row_num": 1259,
+    "company_name": "西飞集团(AVIC XAC)",
+    "locations": "西安",
+    "website_url": "https://www.xac.com.cn",
+    "website_text": "www.xac.com.cn"
+  },
+  {
+    "row_num": 1260,
+    "company_name": "山西焦煤集团",
+    "locations": "太原",
+    "website_url": "https://www.sxcc.com.cn",
+    "website_text": "www.sxcc.com.cn"
+  },
+  {
+    "row_num": 1261,
+    "company_name": "吉林银行",
+    "locations": "长春",
+    "website_url": "https://www.jlbank.com.cn",
+    "website_text": "www.jlbank.com.cn"
+  },
+  {
+    "row_num": 1262,
+    "company_name": "哈电集团",
+    "locations": "哈尔滨",
+    "website_url": "https://www.harbin-electric.com",
+    "website_text": "www.harbin-electric.com"
+  },
+  {
+    "row_num": 1263,
+    "company_name": "徽商银行",
+    "locations": "合肥",
+    "website_url": "https://www.hsbank.com.cn",
+    "website_text": "www.hsbank.com.cn"
+  },
+  {
+    "row_num": 1264,
+    "company_name": "奇瑞汽车",
+    "locations": "芜湖",
+    "website_url": "https://www.chery.com",
+    "website_text": "www.chery.com"
+  },
+  {
+    "row_num": 1265,
+    "company_name": "江淮汽车(JAC)",
+    "locations": "合肥",
+    "website_url": "https://www.jac.com.cn",
+    "website_text": "www.jac.com.cn"
+  },
+  {
+    "row_num": 1266,
+    "company_name": "江铃汽车",
+    "locations": "南昌",
+    "website_url": "https://www.jmc.com.cn",
+    "website_text": "www.jmc.com.cn"
+  },
+  {
+    "row_num": 1267,
+    "company_name": "铜陵有色",
+    "locations": "铜陵",
+    "website_url": "https://www.tnmg.com.cn",
+    "website_text": "www.tnmg.com.cn"
+  },
+  {
+    "row_num": 1268,
+    "company_name": "广西投资集团",
+    "locations": "南宁",
+    "website_url": "https://www.gig.cn",
+    "website_text": "www.gig.cn"
+  },
+  {
+    "row_num": 1269,
+    "company_name": "贵州茅台",
+    "locations": "仁怀",
+    "website_url": "https://www.moutaichina.com",
+    "website_text": "www.moutaichina.com"
+  },
+  {
+    "row_num": 1270,
+    "company_name": "云南白药",
+    "locations": "昆明",
+    "website_url": "https://www.yunnanbaiyao.com.cn",
+    "website_text": "www.yunnanbaiyao.com.cn"
+  },
+  {
+    "row_num": 1271,
+    "company_name": "天津银行",
+    "locations": "天津",
+    "website_url": "https://www.bankoftianjin.com",
+    "website_text": "www.bankoftianjin.com"
+  },
+  {
+    "row_num": 1272,
+    "company_name": "渤海银行",
+    "locations": "天津",
+    "website_url": "https://www.cbhb.com.cn",
+    "website_text": "www.cbhb.com.cn"
+  },
+  {
+    "row_num": 1273,
+    "company_name": "天津港集团",
+    "locations": "天津",
+    "website_url": "https://www.ptacn.com",
+    "website_text": "www.ptacn.com"
+  },
+  {
+    "row_num": 1274,
+    "company_name": "蚂蚁集团 Ant Group",
+    "locations": "杭州",
+    "website_url": "https://www.antgroup.com",
+    "website_text": "www.antgroup.com"
+  },
+  {
+    "row_num": 1275,
+    "company_name": "菜鸟网络 Cainiao",
+    "locations": "杭州",
+    "website_url": "https://www.cainiao.com",
+    "website_text": "www.cainiao.com"
+  },
+  {
+    "row_num": 1276,
+    "company_name": "钉钉 DingTalk",
+    "locations": "杭州",
+    "website_url": "https://www.dingtalk.com",
+    "website_text": "www.dingtalk.com"
+  },
+  {
+    "row_num": 1277,
+    "company_name": "高德地图 Amap",
+    "locations": "北京",
+    "website_url": "https://www.amap.com",
+    "website_text": "www.amap.com"
+  },
+  {
+    "row_num": 1278,
+    "company_name": "饿了么 Ele.me",
+    "locations": "上海",
+    "website_url": "https://www.ele.me",
+    "website_text": "www.ele.me"
+  },
+  {
+    "row_num": 1279,
+    "company_name": "阅文集团",
+    "locations": "上海",
+    "website_url": "https://www.yuewen.com",
+    "website_text": "www.yuewen.com"
+  },
+  {
+    "row_num": 1280,
+    "company_name": "虎牙直播 Huya",
+    "locations": "广州",
+    "website_url": "https://www.huya.com",
+    "website_text": "www.huya.com"
+  },
+  {
+    "row_num": 1281,
+    "company_name": "斗鱼直播 Douyu",
+    "locations": "武汉",
+    "website_url": "https://www.douyu.com",
+    "website_text": "www.douyu.com"
+  },
+  {
+    "row_num": 1282,
+    "company_name": "用友网络 Yonyou",
+    "locations": "北京",
+    "website_url": "https://www.yonyou.com",
+    "website_text": "www.yonyou.com"
+  },
+  {
+    "row_num": 1283,
+    "company_name": "金蝶国际 Kingdee",
+    "locations": "深圳",
+    "website_url": "https://www.kingdee.com",
+    "website_text": "www.kingdee.com"
+  },
+  {
+    "row_num": 1284,
+    "company_name": "金山办公 WPS",
+    "locations": "珠海/北京",
+    "website_url": "https://www.wps.cn",
+    "website_text": "www.wps.cn"
+  },
+  {
+    "row_num": 1285,
+    "company_name": "三六零 360",
+    "locations": "北京",
+    "website_url": "https://www.360.cn",
+    "website_text": "www.360.cn"
+  },
+  {
+    "row_num": 1286,
+    "company_name": "猎豹移动 Cheetah Mobile",
+    "locations": "北京",
+    "website_url": "https://www.cmcm.com",
+    "website_text": "www.cmcm.com"
+  },
+  {
+    "row_num": 1287,
+    "company_name": "陌陌 Momo",
+    "locations": "北京",
+    "website_url": "https://www.hellogroup.com",
+    "website_text": "www.hellogroup.com"
+  },
+  {
+    "row_num": 1288,
+    "company_name": "汽车之家 Autohome",
+    "locations": "北京",
+    "website_url": "https://www.autohome.com.cn",
+    "website_text": "www.autohome.com.cn"
+  },
+  {
+    "row_num": 1289,
+    "company_name": "好未来 TAL",
+    "locations": "北京",
+    "website_url": "https://www.tal.com",
+    "website_text": "www.tal.com"
+  },
+  {
+    "row_num": 1290,
+    "company_name": "新东方 XDF",
+    "locations": "北京",
+    "website_url": "https://www.xdf.cn",
+    "website_text": "www.xdf.cn"
+  },
+  {
+    "row_num": 1291,
+    "company_name": "跟谁学 高途",
+    "locations": "北京",
+    "website_url": "https://www.gaotu.cn",
+    "website_text": "www.gaotu.cn"
+  },
+  {
+    "row_num": 1292,
+    "company_name": "猿辅导 Yuanfudao",
+    "locations": "北京",
+    "website_url": "https://www.yuanfudao.com",
+    "website_text": "www.yuanfudao.com"
+  },
+  {
+    "row_num": 1293,
+    "company_name": "作业帮",
+    "locations": "北京",
+    "website_url": "https://www.zuoyebang.com",
+    "website_text": "www.zuoyebang.com"
+  },
+  {
+    "row_num": 1294,
+    "company_name": "货拉拉 Lalamove",
+    "locations": "深圳",
+    "website_url": "https://www.huolala.cn",
+    "website_text": "www.huolala.cn"
+  },
+  {
+    "row_num": 1295,
+    "company_name": "满帮集团 Full Truck Alliance",
+    "locations": "贵阳",
+    "website_url": "https://www.ymm56.com",
+    "website_text": "www.ymm56.com"
+  },
+  {
+    "row_num": 1296,
+    "company_name": "顺丰同城 SF Tongcheng",
+    "locations": "深圳",
+    "website_url": "https://www.sf-city.com",
+    "website_text": "www.sf-city.com"
+  },
+  {
+    "row_num": 1297,
+    "company_name": "极兔速递 J&T",
+    "locations": "上海",
+    "website_url": "https://www.jtexpress.com",
+    "website_text": "www.jtexpress.com"
+  },
+  {
+    "row_num": 1298,
+    "company_name": "韵达快递 Yunda",
+    "locations": "上海",
+    "website_url": "https://www.yundaex.com",
+    "website_text": "www.yundaex.com"
+  },
+  {
+    "row_num": 1299,
+    "company_name": "申通快递 STO",
+    "locations": "上海",
+    "website_url": "https://www.sto.cn",
+    "website_text": "www.sto.cn"
+  },
+  {
+    "row_num": 1300,
+    "company_name": "圆通速递 YTO",
+    "locations": "上海",
+    "website_url": "https://www.yto.net.cn",
+    "website_text": "www.yto.net.cn"
+  },
+  {
+    "row_num": 1301,
+    "company_name": "中通快递 ZTO",
+    "locations": "上海",
+    "website_url": "https://www.zto.com",
+    "website_text": "www.zto.com"
+  },
+  {
+    "row_num": 1302,
+    "company_name": "德邦快递 Deppon",
+    "locations": "上海",
+    "website_url": "https://www.deppon.com",
+    "website_text": "www.deppon.com"
+  },
+  {
+    "row_num": 1303,
+    "company_name": "京东物流 JD Logistics",
+    "locations": "北京",
+    "website_url": "https://www.jdl.com",
+    "website_text": "www.jdl.com"
+  },
+  {
+    "row_num": 1304,
+    "company_name": "叮咚买菜",
+    "locations": "上海",
+    "website_url": "https://www.ddxq.mobi",
+    "website_text": "www.ddxq.mobi"
+  },
+  {
+    "row_num": 1305,
+    "company_name": "每日优鲜",
+    "locations": "北京",
+    "website_url": "https://www.missfresh.cn",
+    "website_text": "www.missfresh.cn"
+  },
+  {
+    "row_num": 1306,
+    "company_name": "朴朴超市",
+    "locations": "福州",
+    "website_url": "https://www.pupumall.com",
+    "website_text": "www.pupumall.com"
+  },
+  {
+    "row_num": 1307,
+    "company_name": "盒马鲜生 Hema",
+    "locations": "上海",
+    "website_url": "https://www.freshhema.com",
+    "website_text": "www.freshhema.com"
+  },
+  {
+    "row_num": 1308,
+    "company_name": "永辉超市",
+    "locations": "福州",
+    "website_url": "https://www.yonghui.com.cn",
+    "website_text": "www.yonghui.com.cn"
+  },
+  {
+    "row_num": 1309,
+    "company_name": "名创优品 MINISO",
+    "locations": "广州",
+    "website_url": "https://www.miniso.com",
+    "website_text": "www.miniso.com"
+  },
+  {
+    "row_num": 1310,
+    "company_name": "泡泡玛特 Pop Mart",
+    "locations": "北京",
+    "website_url": "https://www.popmart.com",
+    "website_text": "www.popmart.com"
+  },
+  {
+    "row_num": 1311,
+    "company_name": "蜜雪冰城",
+    "locations": "郑州",
+    "website_url": "https://www.mxbc.com",
+    "website_text": "www.mxbc.com"
+  },
+  {
+    "row_num": 1312,
+    "company_name": "瑞幸咖啡 Luckin Coffee",
+    "locations": "厦门",
+    "website_url": "https://www.luckincoffee.com",
+    "website_text": "www.luckincoffee.com"
+  },
+  {
+    "row_num": 1313,
+    "company_name": "喜茶 Heytea",
+    "locations": "深圳",
+    "website_url": "https://www.heytea.com",
+    "website_text": "www.heytea.com"
+  },
+  {
+    "row_num": 1314,
+    "company_name": "奈雪的茶 Nayuki",
+    "locations": "深圳",
+    "website_url": "https://www.nayuki.com",
+    "website_text": "www.nayuki.com"
+  },
+  {
+    "row_num": 1315,
+    "company_name": "海底捞 Haidilao",
+    "locations": "北京",
+    "website_url": "https://www.haidilao.com",
+    "website_text": "www.haidilao.com"
+  },
+  {
+    "row_num": 1316,
+    "company_name": "良品铺子 Bestore",
+    "locations": "武汉",
+    "website_url": "https://www.bestore.com",
+    "website_text": "www.bestore.com"
+  },
+  {
+    "row_num": 1317,
+    "company_name": "三只松鼠 Three Squirrels",
+    "locations": "芜湖",
+    "website_url": "https://www.3songshu.com",
+    "website_text": "www.3songshu.com"
+  },
+  {
+    "row_num": 1318,
+    "company_name": "百草味 Be & Cheery",
+    "locations": "杭州",
+    "website_url": "https://www.vipbcw.com",
+    "website_text": "www.vipbcw.com"
+  },
+  {
+    "row_num": 1319,
+    "company_name": "来伊份 Lyfen",
+    "locations": "上海",
+    "website_url": "https://www.laiyifen.com",
+    "website_text": "www.laiyifen.com"
+  },
+  {
+    "row_num": 1320,
+    "company_name": "绝味食品 Juewei",
+    "locations": "长沙",
+    "website_url": "https://www.juewei.cn",
+    "website_text": "www.juewei.cn"
+  },
+  {
+    "row_num": 1321,
+    "company_name": "洽洽食品 Qiaqia",
+    "locations": "合肥",
+    "website_url": "https://www.qiaqiafood.com",
+    "website_text": "www.qiaqiafood.com"
+  },
+  {
+    "row_num": 1322,
+    "company_name": "农夫山泉 Nongfu Spring",
+    "locations": "杭州",
+    "website_url": "https://www.nongfuspring.com",
+    "website_text": "www.nongfuspring.com"
+  },
+  {
+    "row_num": 1323,
+    "company_name": "元气森林 Genki Forest",
+    "locations": "北京",
+    "website_url": "https://www.genkiforest.com",
+    "website_text": "www.genkiforest.com"
+  },
+  {
+    "row_num": 1324,
+    "company_name": "安踏 Anta Sports",
+    "locations": "厦门/晋江",
+    "website_url": "https://www.anta.com",
+    "website_text": "www.anta.com"
+  },
+  {
+    "row_num": 1325,
+    "company_name": "李宁 Li-Ning",
+    "locations": "北京",
+    "website_url": "https://www.lining.com",
+    "website_text": "www.lining.com"
+  },
+  {
+    "row_num": 1326,
+    "company_name": "特步 Xtep",
+    "locations": "厦门",
+    "website_url": "https://www.xtep.com.cn",
+    "website_text": "www.xtep.com.cn"
+  },
+  {
+    "row_num": 1327,
+    "company_name": "361度 361°",
+    "locations": "厦门",
+    "website_url": "https://www.361sport.com",
+    "website_text": "www.361sport.com"
+  },
+  {
+    "row_num": 1328,
+    "company_name": "波司登 Bosideng",
+    "locations": "常熟",
+    "website_url": "https://www.bosideng.com",
+    "website_text": "www.bosideng.com"
+  },
+  {
+    "row_num": 1329,
+    "company_name": "森马 Semir",
+    "locations": "温州",
+    "website_url": "https://www.semir.com",
+    "website_text": "www.semir.com"
+  },
+  {
+    "row_num": 1330,
+    "company_name": "海澜之家 HLA",
+    "locations": "江阴",
+    "website_url": "https://www.hla.com.cn",
+    "website_text": "www.hla.com.cn"
+  },
+  {
+    "row_num": 1331,
+    "company_name": "太平鸟 Peacebird",
+    "locations": "宁波",
+    "website_url": "https://www.peacebird.com",
+    "website_text": "www.peacebird.com"
+  },
+  {
+    "row_num": 1332,
+    "company_name": "珀莱雅 PROYA",
+    "locations": "杭州",
+    "website_url": "https://www.proya.com",
+    "website_text": "www.proya.com"
+  },
+  {
+    "row_num": 1333,
+    "company_name": "华熙生物 Bloomage Biotech",
+    "locations": "北京/济南",
+    "website_url": "https://www.bloomagebiotech.com",
+    "website_text": "www.bloomagebiotech.com"
+  },
+  {
+    "row_num": 1334,
+    "company_name": "贝泰妮 Botanee",
+    "locations": "昆明",
+    "website_url": "https://www.botanee.com",
+    "website_text": "www.botanee.com"
+  },
+  {
+    "row_num": 1335,
+    "company_name": "完美日记 Perfect Diary",
+    "locations": "广州",
+    "website_url": "https://www.yatsenglobal.com",
+    "website_text": "www.yatsenglobal.com"
+  },
+  {
+    "row_num": 1336,
+    "company_name": "蓝月亮 Blue Moon",
+    "locations": "广州",
+    "website_url": "https://www.bluemoon.com.cn",
+    "website_text": "www.bluemoon.com.cn"
+  },
+  {
+    "row_num": 1337,
+    "company_name": "立白集团 Liby",
+    "locations": "广州",
+    "website_url": "https://www.liby.com.cn",
+    "website_text": "www.liby.com.cn"
+  },
+  {
+    "row_num": 1338,
+    "company_name": "纳爱斯集团 Nice",
+    "locations": "丽水",
+    "website_url": "https://www.cnnice.com",
+    "website_text": "www.cnnice.com"
+  },
+  {
+    "row_num": 1339,
+    "company_name": "得力集团 Deli",
+    "locations": "宁波",
+    "website_url": "https://www.deliworld.com",
+    "website_text": "www.deliworld.com"
+  },
+  {
+    "row_num": 1340,
+    "company_name": "晨光文具 M&G",
+    "locations": "上海",
+    "website_url": "https://www.mg-pen.com",
+    "website_text": "www.mg-pen.com"
+  },
+  {
+    "row_num": 1341,
+    "company_name": "公牛集团 Bull",
+    "locations": "慈溪",
+    "website_url": "https://www.bull.cn",
+    "website_text": "www.bull.cn"
+  },
+  {
+    "row_num": 1342,
+    "company_name": "正泰集团 CHINT",
+    "locations": "温州",
+    "website_url": "https://www.chint.com",
+    "website_text": "www.chint.com"
+  },
+  {
+    "row_num": 1343,
+    "company_name": "三花控股 Sanhua",
+    "locations": "新昌/杭州",
+    "website_url": "https://www.sanhuagroup.com",
+    "website_text": "www.sanhuagroup.com"
+  },
+  {
+    "row_num": 1344,
+    "company_name": "方太厨具 Fotile",
+    "locations": "宁波",
+    "website_url": "https://www.fotile.com",
+    "website_text": "www.fotile.com"
+  },
+  {
+    "row_num": 1345,
+    "company_name": "老板电器 Robam",
+    "locations": "杭州",
+    "website_url": "https://www.robam.com",
+    "website_text": "www.robam.com"
+  },
+  {
+    "row_num": 1346,
+    "company_name": "九阳股份 Joyoung",
+    "locations": "杭州",
+    "website_url": "https://www.joyoung.com",
+    "website_text": "www.joyoung.com"
+  },
+  {
+    "row_num": 1347,
+    "company_name": "苏泊尔 Supor",
+    "locations": "杭州",
+    "website_url": "https://www.supor.com.cn",
+    "website_text": "www.supor.com.cn"
+  },
+  {
+    "row_num": 1348,
+    "company_name": "欧派家居 Oppein",
+    "locations": "广州",
+    "website_url": "https://www.oppein.com",
+    "website_text": "www.oppein.com"
+  },
+  {
+    "row_num": 1349,
+    "company_name": "索菲亚家居 Suofeiya",
+    "locations": "广州",
+    "website_url": "https://www.suofeiya.com.cn",
+    "website_text": "www.suofeiya.com.cn"
+  },
+  {
+    "row_num": 1350,
+    "company_name": "顾家家居 Kuka",
+    "locations": "杭州",
+    "website_url": "https://www.kukahome.com",
+    "website_text": "www.kukahome.com"
+  },
+  {
+    "row_num": 1351,
+    "company_name": "东方财富 East Money",
+    "locations": "上海",
+    "website_url": "https://www.eastmoney.com",
+    "website_text": "www.eastmoney.com"
+  },
+  {
+    "row_num": 1352,
+    "company_name": "同花顺 10jqka",
+    "locations": "杭州",
+    "website_url": "https://www.10jqka.com.cn",
+    "website_text": "www.10jqka.com.cn"
+  },
+  {
+    "row_num": 1353,
+    "company_name": "万得 Wind",
+    "locations": "上海",
+    "website_url": "https://www.wind.com.cn",
+    "website_text": "www.wind.com.cn"
+  },
+  {
+    "row_num": 1354,
+    "company_name": "恒生电子 Hundsun",
+    "locations": "杭州",
+    "website_url": "https://www.hundsun.com",
+    "website_text": "www.hundsun.com"
+  },
+  {
+    "row_num": 1355,
+    "company_name": "大智慧 DZH",
+    "locations": "上海",
+    "website_url": "https://www.gw.com.cn",
+    "website_text": "www.gw.com.cn"
+  },
+  {
+    "row_num": 1356,
+    "company_name": "BOSS直聘 Kanzhun",
+    "locations": "北京",
+    "website_url": "https://www.zhipin.com",
+    "website_text": "www.zhipin.com"
+  },
+  {
+    "row_num": 1357,
+    "company_name": "猎聘 Liepin",
+    "locations": "北京",
+    "website_url": "https://www.liepin.com",
+    "website_text": "www.liepin.com"
+  },
+  {
+    "row_num": 1358,
+    "company_name": "前程无忧 51job",
+    "locations": "上海",
+    "website_url": "https://www.51job.com",
+    "website_text": "www.51job.com"
+  },
+  {
+    "row_num": 1359,
+    "company_name": "智联招聘 Zhaopin",
+    "locations": "北京",
+    "website_url": "https://www.zhaopin.com",
+    "website_text": "www.zhaopin.com"
+  },
+  {
+    "row_num": 1360,
+    "company_name": "快手 Kuaishou",
+    "locations": "北京",
+    "website_url": "https://www.kuaishou.com",
+    "website_text": "www.kuaishou.com"
+  },
+  {
+    "row_num": 1361,
+    "company_name": "映客直播 Inke",
+    "locations": "北京",
+    "website_url": "https://www.inke.cn",
+    "website_text": "www.inke.cn"
+  },
+  {
+    "row_num": 1362,
+    "company_name": "喜马拉雅 Ximalaya",
+    "locations": "上海",
+    "website_url": "https://www.ximalaya.com",
+    "website_text": "www.ximalaya.com"
+  },
+  {
+    "row_num": 1363,
+    "company_name": "荔枝 FM Lizhi",
+    "locations": "广州",
+    "website_url": "https://www.lizhi.fm",
+    "website_text": "www.lizhi.fm"
+  },
+  {
+    "row_num": 1364,
+    "company_name": "美图 Meitu",
+    "locations": "厦门",
+    "website_url": "https://www.meitu.com",
+    "website_text": "www.meitu.com"
+  },
+  {
+    "row_num": 1365,
+    "company_name": "汇顶科技 Goodix",
+    "locations": "深圳",
+    "website_url": "https://www.goodix.com",
+    "website_text": "www.goodix.com"
+  },
+  {
+    "row_num": 1366,
+    "company_name": "舜宇光学 Sunny Optical",
+    "locations": "余姚",
+    "website_url": "https://www.sunnyoptical.com",
+    "website_text": "www.sunnyoptical.com"
+  },
+  {
+    "row_num": 1367,
+    "company_name": "大族激光 Han's Laser",
+    "locations": "深圳",
+    "website_url": "https://www.hanslaser.com",
+    "website_text": "www.hanslaser.com"
+  },
+  {
+    "row_num": 1368,
+    "company_name": "锐科激光 Raycus",
+    "locations": "武汉",
+    "website_url": "https://www.raycus.com",
+    "website_text": "www.raycus.com"
+  },
+  {
+    "row_num": 1369,
+    "company_name": "中科曙光 Sugon",
+    "locations": "北京/天津",
+    "website_url": "https://www.sugon.com",
+    "website_text": "www.sugon.com"
+  },
+  {
+    "row_num": 1370,
+    "company_name": "同方股份 Tsinghua Tongfang",
+    "locations": "北京",
+    "website_url": "https://www.thtf.com.cn",
+    "website_text": "www.thtf.com.cn"
+  },
+  {
+    "row_num": 1371,
+    "company_name": "东软集团 Neusoft",
+    "locations": "沈阳",
+    "website_url": "https://www.neusoft.com",
+    "website_text": "www.neusoft.com"
+  },
+  {
+    "row_num": 1372,
+    "company_name": "中科创达 ThunderSoft",
+    "locations": "北京",
+    "website_url": "https://www.thundersoft.com",
+    "website_text": "www.thundersoft.com"
+  },
+  {
+    "row_num": 1373,
+    "company_name": "软通动力 iSoftStone",
+    "locations": "北京",
+    "website_url": "https://www.isoftstone.com",
+    "website_text": "www.isoftstone.com"
+  },
+  {
+    "row_num": 1374,
+    "company_name": "中软国际 Chinasoft",
+    "locations": "北京/香港",
+    "website_url": "https://www.chinasofti.com",
+    "website_text": "www.chinasofti.com"
+  },
+  {
+    "row_num": 1375,
+    "company_name": "太极股份",
+    "locations": "北京",
+    "website_url": "https://www.taiji.com.cn",
+    "website_text": "www.taiji.com.cn"
+  },
+  {
+    "row_num": 1376,
+    "company_name": "深信服 Sangfor",
+    "locations": "深圳",
+    "website_url": "https://www.sangfor.com.cn",
+    "website_text": "www.sangfor.com.cn"
+  },
+  {
+    "row_num": 1377,
+    "company_name": "奇安信 Qi-AnXin",
+    "locations": "北京",
+    "website_url": "https://www.qianxin.com",
+    "website_text": "www.qianxin.com"
+  },
+  {
+    "row_num": 1378,
+    "company_name": "启明星辰 VenusTech",
+    "locations": "北京",
+    "website_url": "https://www.venustech.com.cn",
+    "website_text": "www.venustech.com.cn"
+  },
+  {
+    "row_num": 1379,
+    "company_name": "绿盟科技 NSFOCUS",
+    "locations": "北京",
+    "website_url": "https://www.nsfocus.com.cn",
+    "website_text": "www.nsfocus.com.cn"
+  },
+  {
+    "row_num": 1380,
+    "company_name": "安恒信息 DBAPPSecurity",
+    "locations": "杭州",
+    "website_url": "https://www.dbappsecurity.com.cn",
+    "website_text": "www.dbappsecurity.com.cn"
+  },
+  {
+    "row_num": 1381,
+    "company_name": "亚信安全 AsiaInfo",
+    "locations": "北京",
+    "website_url": "https://www.asiainfo.com",
+    "website_text": "www.asiainfo.com"
+  },
+  {
+    "row_num": 1382,
+    "company_name": "大疆创新 DJI",
+    "locations": "深圳",
+    "website_url": "https://www.dji.com",
+    "website_text": "www.dji.com"
+  },
+  {
+    "row_num": 1383,
+    "company_name": "禾赛科技 Hesai",
+    "locations": "上海",
+    "website_url": "https://www.hesaitech.com",
+    "website_text": "www.hesaitech.com"
+  },
+  {
+    "row_num": 1384,
+    "company_name": "速腾聚创 RoboSense",
+    "locations": "深圳",
+    "website_url": "https://www.robosense.ai",
+    "website_text": "www.robosense.ai"
+  },
+  {
+    "row_num": 1385,
+    "company_name": "谷歌中国 Google",
+    "locations": "北京/上海",
+    "website_url": "https://careers.google.com",
+    "website_text": "careers.google.com"
+  },
+  {
+    "row_num": 1386,
+    "company_name": "亚马逊中国 Amazon",
+    "locations": "北京/上海/深圳",
+    "website_url": "https://www.amazon.jobs",
+    "website_text": "www.amazon.jobs"
+  },
+  {
+    "row_num": 1387,
+    "company_name": "苹果中国 Apple",
+    "locations": "北京/上海/深圳",
+    "website_url": "https://www.apple.com.cn/careers",
+    "website_text": "www.apple.com.cn"
+  },
+  {
+    "row_num": 1388,
+    "company_name": "微软中国 Microsoft",
+    "locations": "北京/上海/苏州",
+    "website_url": "https://www.microsoft.com/zh-cn",
+    "website_text": "www.microsoft.com"
+  },
+  {
+    "row_num": 1389,
+    "company_name": "IBM中国",
+    "locations": "北京/上海/深圳/大连",
+    "website_url": "https://www.ibm.com/cn-zh/careers",
+    "website_text": "www.ibm.com"
+  },
+  {
+    "row_num": 1390,
+    "company_name": "惠普中国 HP",
+    "locations": "北京/上海/重庆",
+    "website_url": "https://www.hp.com",
+    "website_text": "www.hp.com"
+  },
+  {
+    "row_num": 1391,
+    "company_name": "戴尔中国 Dell",
+    "locations": "北京/上海/厦门/成都",
+    "website_url": "https://jobs.dell.com",
+    "website_text": "jobs.dell.com"
+  },
+  {
+    "row_num": 1392,
+    "company_name": "思科中国 Cisco",
+    "locations": "上海/北京/杭州/深圳",
+    "website_url": "https://www.cisco.com",
+    "website_text": "www.cisco.com"
+  },
+  {
+    "row_num": 1393,
+    "company_name": "甲骨文中国 Oracle",
+    "locations": "北京/上海/深圳",
+    "website_url": "https://www.oracle.com",
+    "website_text": "www.oracle.com"
+  },
+  {
+    "row_num": 1394,
+    "company_name": "SAP中国",
+    "locations": "上海/北京/成都/大连",
+    "website_url": "https://www.sap.cn",
+    "website_text": "www.sap.cn"
+  },
+  {
+    "row_num": 1395,
+    "company_name": "英伟达中国 NVIDIA",
+    "locations": "上海/北京/深圳",
+    "website_url": "https://www.nvidia.cn",
+    "website_text": "www.nvidia.cn"
+  },
+  {
+    "row_num": 1396,
+    "company_name": "高通中国 Qualcomm",
+    "locations": "上海/北京/深圳",
+    "website_url": "https://www.qualcomm.cn",
+    "website_text": "www.qualcomm.cn"
+  },
+  {
+    "row_num": 1397,
+    "company_name": "博通中国 Broadcom",
+    "locations": "上海/北京",
+    "website_url": "https://www.broadcom.com",
+    "website_text": "www.broadcom.com"
+  },
+  {
+    "row_num": 1398,
+    "company_name": "台积电中国 TSMC",
+    "locations": "南京/上海",
+    "website_url": "https://www.tsmc.com/chinese/careers",
+    "website_text": "www.tsmc.com"
+  },
+  {
+    "row_num": 1399,
+    "company_name": "三星中国 Samsung",
+    "locations": "北京/西安/苏州/天津",
+    "website_url": "https://www.samsung.com.cn/careers",
+    "website_text": "www.samsung.com.cn"
+  },
+  {
+    "row_num": 1400,
+    "company_name": "LG中国",
+    "locations": "北京/南京/广州",
+    "website_url": "https://www.lg.com",
+    "website_text": "www.lg.com"
+  },
+  {
+    "row_num": 1401,
+    "company_name": "索尼中国 Sony",
+    "locations": "上海/北京/无锡",
+    "website_url": "https://www.sony.com.cn",
+    "website_text": "www.sony.com.cn"
+  },
+  {
+    "row_num": 1402,
+    "company_name": "松下中国 Panasonic",
+    "locations": "北京/上海/杭州/大连",
+    "website_url": "https://www.panasonic.cn",
+    "website_text": "www.panasonic.cn"
+  },
+  {
+    "row_num": 1403,
+    "company_name": "西门子中国 Siemens",
+    "locations": "北京/上海/南京/成都",
+    "website_url": "https://new.siemens.com/cn/zh/company/jobs.html",
+    "website_text": "new.siemens.com"
+  },
+  {
+    "row_num": 1404,
+    "company_name": "博世中国 Bosch",
+    "locations": "上海/苏州/无锡/长沙",
+    "website_url": "https://www.bosch.com.cn/careers",
+    "website_text": "www.bosch.com.cn"
+  },
+  {
+    "row_num": 1405,
+    "company_name": "ABB中国",
+    "locations": "北京/上海/厦门",
+    "website_url": "https://new.abb.com/cn/careers",
+    "website_text": "new.abb.com"
+  },
+  {
+    "row_num": 1406,
+    "company_name": "施耐德电气中国 Schneider",
+    "locations": "北京/上海/广州/西安",
+    "website_url": "https://www.se.com/cn/zh/about-us/careers",
+    "website_text": "www.se.com"
+  },
+  {
+    "row_num": 1407,
+    "company_name": "通用电气中国 GE",
+    "locations": "上海/北京/天津",
+    "website_url": "https://www.ge.com/cn/careers",
+    "website_text": "www.ge.com"
+  },
+  {
+    "row_num": 1408,
+    "company_name": "霍尼韦尔中国 Honeywell",
+    "locations": "上海/北京/天津/苏州",
+    "website_url": "https://www.honeywell.com.cn/careers",
+    "website_text": "www.honeywell.com.cn"
+  },
+  {
+    "row_num": 1409,
+    "company_name": "联合技术中国 UTC",
+    "locations": "上海/北京",
+    "website_url": "https://www.rtx.com/careers",
+    "website_text": "www.rtx.com"
+  },
+  {
+    "row_num": 1410,
+    "company_name": "空客中国 Airbus",
+    "locations": "天津/北京",
+    "website_url": "https://www.airbus.com/en/careers",
+    "website_text": "www.airbus.com"
+  },
+  {
+    "row_num": 1411,
+    "company_name": "波音中国 Boeing",
+    "locations": "北京/上海/天津",
+    "website_url": "https://www.boeing.com/careers",
+    "website_text": "www.boeing.com"
+  },
+  {
+    "row_num": 1412,
+    "company_name": "巴斯夫中国 BASF",
+    "locations": "上海/南京/重庆",
+    "website_url": "https://www.basf.com/cn/zh/careers.html",
+    "website_text": "www.basf.com"
+  },
+  {
+    "row_num": 1413,
+    "company_name": "陶氏中国 Dow",
+    "locations": "上海/张家港",
+    "website_url": "https://corporate.dow.com/zh-cn/careers.html",
+    "website_text": "corporate.dow.com"
+  },
+  {
+    "row_num": 1414,
+    "company_name": "拜耳中国 Bayer",
+    "locations": "北京/上海/广州",
+    "website_url": "https://www.bayer.com.cn/zh/careers",
+    "website_text": "www.bayer.com.cn"
+  },
+  {
+    "row_num": 1415,
+    "company_name": "辉瑞中国 Pfizer",
+    "locations": "上海/北京/杭州/武汉",
+    "website_url": "https://www.pfizer.com.cn",
+    "website_text": "www.pfizer.com.cn"
+  },
+  {
+    "row_num": 1416,
+    "company_name": "诺华中国 Novartis",
+    "locations": "上海/北京",
+    "website_url": "https://www.novartis.com.cn/careers",
+    "website_text": "www.novartis.com.cn"
+  },
+  {
+    "row_num": 1417,
+    "company_name": "罗氏中国 Roche",
+    "locations": "上海/北京",
+    "website_url": "https://www.roche.com.cn/careers",
+    "website_text": "www.roche.com.cn"
+  },
+  {
+    "row_num": 1418,
+    "company_name": "默沙东中国 MSD",
+    "locations": "上海/北京/杭州",
+    "website_url": "https://www.msdchina.com.cn/careers",
+    "website_text": "www.msdchina.com.cn"
+  },
+  {
+    "row_num": 1419,
+    "company_name": "赛诺菲中国 Sanofi",
+    "locations": "上海/北京",
+    "website_url": "https://www.sanofi.cn",
+    "website_text": "www.sanofi.cn"
+  },
+  {
+    "row_num": 1420,
+    "company_name": "礼来中国 Eli Lilly",
+    "locations": "上海/苏州",
+    "website_url": "https://www.lilly.com.cn/careers",
+    "website_text": "www.lilly.com.cn"
+  },
+  {
+    "row_num": 1421,
+    "company_name": "阿斯利康中国 AstraZeneca",
+    "locations": "上海/无锡/泰州",
+    "website_url": "https://www.astrazeneca.com.cn/careers",
+    "website_text": "www.astrazeneca.com.cn"
+  },
+  {
+    "row_num": 1422,
+    "company_name": "葛兰素史克中国 GSK",
+    "locations": "上海/北京",
+    "website_url": "https://www.gsk-china.com",
+    "website_text": "www.gsk-china.com"
+  },
+  {
+    "row_num": 1423,
+    "company_name": "强生中国 Johnson & Johnson",
+    "locations": "上海/北京/广州/苏州",
+    "website_url": "https://www.jnj.com.cn",
+    "website_text": "www.jnj.com.cn"
+  },
+  {
+    "row_num": 1424,
+    "company_name": "宝洁中国 P&G",
+    "locations": "广州/上海/北京/天津",
+    "website_url": "https://careers.pg.com.cn",
+    "website_text": "careers.pg.com.cn"
+  },
+  {
+    "row_num": 1425,
+    "company_name": "联合利华中国 Unilever",
+    "locations": "上海/北京/天津/合肥",
+    "website_url": "https://www.unilever.com.cn",
+    "website_text": "www.unilever.com.cn"
+  },
+  {
+    "row_num": 1426,
+    "company_name": "欧莱雅中国 L'Oréal",
+    "locations": "上海/苏州/宜昌",
+    "website_url": "https://careers.loreal.com",
+    "website_text": "careers.loreal.com"
+  },
+  {
+    "row_num": 1427,
+    "company_name": "玛氏中国 Mars",
+    "locations": "北京/上海/广州/天津",
+    "website_url": "https://careers.mars.com",
+    "website_text": "careers.mars.com"
+  },
+  {
+    "row_num": 1428,
+    "company_name": "雀巢中国 Nestlé",
+    "locations": "北京/上海/东莞/天津",
+    "website_url": "https://www.nestle.com.cn",
+    "website_text": "www.nestle.com.cn"
+  },
+  {
+    "row_num": 1429,
+    "company_name": "百事中国 PepsiCo",
+    "locations": "上海/北京/广州/武汉",
+    "website_url": "https://www.pepsico.com.cn",
+    "website_text": "www.pepsico.com.cn"
+  },
+  {
+    "row_num": 1430,
+    "company_name": "可口可乐中国 Coca-Cola",
+    "locations": "上海/北京/成都/厦门",
+    "website_url": "https://www.coca-cola.com.cn",
+    "website_text": "www.coca-cola.com.cn"
+  },
+  {
+    "row_num": 1431,
+    "company_name": "亿滋中国 Mondelēz",
+    "locations": "上海/北京/苏州/广州",
+    "website_url": "https://www.mondelezinternational.com/careers",
+    "website_text": "www.mondelezinternational.com"
+  },
+  {
+    "row_num": 1432,
+    "company_name": "耐克中国 Nike",
+    "locations": "上海/北京/广州",
+    "website_url": "https://jobs.nike.com",
+    "website_text": "jobs.nike.com"
+  },
+  {
+    "row_num": 1433,
+    "company_name": "阿迪达斯中国 Adidas",
+    "locations": "上海/北京/广州/成都",
+    "website_url": "https://www.adidas.com.cn",
+    "website_text": "www.adidas.com.cn"
+  },
+  {
+    "row_num": 1434,
+    "company_name": "宜家中国 IKEA",
+    "locations": "上海/北京/广州/深圳/成都",
+    "website_url": "https://www.ikea.cn/cn/zh/this-is-ikea/work-with-us",
+    "website_text": "www.ikea.cn"
+  },
+  {
+    "row_num": 1435,
+    "company_name": "迪士尼中国 Disney",
+    "locations": "上海/北京",
+    "website_url": "https://jobs.disneycareers.com",
+    "website_text": "jobs.disneycareers.com"
+  },
+  {
+    "row_num": 1436,
+    "company_name": "星巴克中国 Starbucks",
+    "locations": "上海/北京/广州/深圳",
+    "website_url": "https://www.starbucks.com.cn",
+    "website_text": "www.starbucks.com.cn"
+  },
+  {
+    "row_num": 1437,
+    "company_name": "麦当劳中国 McDonald's",
+    "locations": "上海/北京/广州/深圳",
+    "website_url": "https://www.mcdonalds.com.cn/careers",
+    "website_text": "www.mcdonalds.com.cn"
+  },
+  {
+    "row_num": 1438,
+    "company_name": "肯德基中国 KFC",
+    "locations": "上海/北京/广州/深圳",
+    "website_url": "https://www.yumchina.com/careers",
+    "website_text": "www.yumchina.com"
+  },
+  {
+    "row_num": 1439,
+    "company_name": "沃尔玛中国 Walmart",
+    "locations": "深圳/上海/北京",
+    "website_url": "https://www.walmart.cn",
+    "website_text": "www.walmart.cn"
+  },
+  {
+    "row_num": 1440,
+    "company_name": "开市客中国 Costco",
+    "locations": "上海/苏州/宁波/深圳",
+    "website_url": "https://www.costco.com.cn/careers",
+    "website_text": "www.costco.com.cn"
+  },
+  {
+    "row_num": 1441,
+    "company_name": "埃森哲中国 Accenture",
+    "locations": "上海/北京/大连/广州/深圳/成都",
+    "website_url": "https://www.accenture.cn/careers",
+    "website_text": "www.accenture.cn"
+  },
+  {
+    "row_num": 1442,
+    "company_name": "德勤中国 Deloitte",
+    "locations": "上海/北京/深圳/广州/香港",
+    "website_url": "https://www.deloitte.com/cn/zh/careers.html",
+    "website_text": "www.deloitte.com"
+  },
+  {
+    "row_num": 1443,
+    "company_name": "普华永道中国 PwC",
+    "locations": "上海/北京/深圳/广州/香港",
+    "website_url": "https://www.pwccn.com/zh/careers.html",
+    "website_text": "www.pwccn.com"
+  },
+  {
+    "row_num": 1444,
+    "company_name": "安永中国 EY",
+    "locations": "上海/北京/深圳/广州/香港",
+    "website_url": "https://www.ey.com/zh_cn/careers",
+    "website_text": "www.ey.com"
+  },
+  {
+    "row_num": 1445,
+    "company_name": "毕马威中国 KPMG",
+    "locations": "上海/北京/深圳/广州/香港",
+    "website_url": "https://home.kpmg/cn/zh/home/careers.html",
+    "website_text": "home.kpmg"
+  },
+  {
+    "row_num": 1446,
+    "company_name": "汇丰中国 HSBC",
+    "locations": "上海/北京/深圳/广州",
+    "website_url": "https://www.hsbc.com.cn/careers",
+    "website_text": "www.hsbc.com.cn"
+  },
+  {
+    "row_num": 1447,
+    "company_name": "花旗中国 Citi",
+    "locations": "上海/北京/广州/深圳",
+    "website_url": "https://www.citigroup.com.cn",
+    "website_text": "www.citigroup.com.cn"
+  },
+  {
+    "row_num": 1448,
+    "company_name": "渣打中国 Standard Chartered",
+    "locations": "上海/北京/深圳/广州",
+    "website_url": "https://www.sc.com",
+    "website_text": "www.sc.com"
+  },
+  {
+    "row_num": 1449,
+    "company_name": "瑞银中国 UBS",
+    "locations": "上海/北京",
+    "website_url": "https://www.ubs.com/cn/zh/careers.html",
+    "website_text": "www.ubs.com"
+  },
+  {
+    "row_num": 1450,
+    "company_name": "摩根士丹利中国 Morgan Stanley",
+    "locations": "上海/北京/珠海",
+    "website_url": "https://www.morganstanley.com",
+    "website_text": "www.morganstanley.com"
+  },
+  {
+    "row_num": 1451,
+    "company_name": "高盛中国 Goldman Sachs",
+    "locations": "北京/上海/深圳",
+    "website_url": "https://www.goldmansachs.com/careers",
+    "website_text": "www.goldmansachs.com"
+  },
+  {
+    "row_num": 1452,
+    "company_name": "摩根大通中国 JPMorgan",
+    "locations": "上海/北京",
+    "website_url": "https://www.jpmorganchase.com/careers",
+    "website_text": "www.jpmorganchase.com"
+  },
+  {
+    "row_num": 1453,
+    "company_name": "万事达卡中国 Mastercard",
+    "locations": "北京/上海",
+    "website_url": "https://www.mastercard.com.cn/zh-cn/careers.html",
+    "website_text": "www.mastercard.com.cn"
+  },
+  {
+    "row_num": 1454,
+    "company_name": "麦肯锡中国 McKinsey",
+    "locations": "上海/北京/深圳/香港",
+    "website_url": "https://www.mckinsey.com",
+    "website_text": "www.mckinsey.com"
+  },
+  {
+    "row_num": 1455,
+    "company_name": "波士顿咨询中国 BCG",
+    "locations": "上海/北京/深圳/香港",
+    "website_url": "https://careers.bcg.com",
+    "website_text": "careers.bcg.com"
+  },
+  {
+    "row_num": 1456,
+    "company_name": "贝恩中国 Bain",
+    "locations": "上海/北京/香港",
+    "website_url": "https://www.bain.com/careers",
+    "website_text": "www.bain.com"
+  },
+  {
+    "row_num": 1457,
+    "company_name": "特斯拉中国 Tesla",
+    "locations": "上海/北京/深圳/成都",
+    "website_url": "https://www.tesla.cn/careers",
+    "website_text": "www.tesla.cn"
+  },
+  {
+    "row_num": 1458,
+    "company_name": "中国工商银行 ICBC",
+    "locations": "北京",
+    "website_url": "https://job.icbc.com.cn",
+    "website_text": "job.icbc.com.cn"
+  },
+  {
+    "row_num": 1459,
+    "company_name": "中国农业银行 ABC",
+    "locations": "北京",
+    "website_url": "https://career.abchina.com",
+    "website_text": "career.abchina.com"
+  },
+  {
+    "row_num": 1460,
+    "company_name": "中国银行 BOC",
+    "locations": "北京",
+    "website_url": "https://www.boc.cn",
+    "website_text": "www.boc.cn"
+  },
+  {
+    "row_num": 1461,
+    "company_name": "中国建设银行 CCB",
+    "locations": "北京",
+    "website_url": "https://job.ccb.com",
+    "website_text": "job.ccb.com"
+  },
+  {
+    "row_num": 1462,
+    "company_name": "交通银行 BoCom",
+    "locations": "上海",
+    "website_url": "https://job.bankcomm.com",
+    "website_text": "job.bankcomm.com"
+  },
+  {
+    "row_num": 1463,
+    "company_name": "中国邮政储蓄银行 PSBC",
+    "locations": "北京",
+    "website_url": "https://psbc.zhaopin.com",
+    "website_text": "psbc.zhaopin.com"
+  },
+  {
+    "row_num": 1464,
+    "company_name": "招商银行 CMB",
+    "locations": "深圳",
+    "website_url": "https://career.cmbchina.com",
+    "website_text": "career.cmbchina.com"
+  },
+  {
+    "row_num": 1465,
+    "company_name": "中信银行 CITIC Bank",
+    "locations": "北京",
+    "website_url": "https://www.citicbank.com",
+    "website_text": "www.citicbank.com"
+  },
+  {
+    "row_num": 1466,
+    "company_name": "民生银行 CMBC",
+    "locations": "北京",
+    "website_url": "https://career.cmbc.com.cn",
+    "website_text": "career.cmbc.com.cn"
+  },
+  {
+    "row_num": 1467,
+    "company_name": "平安银行 PAB",
+    "locations": "深圳",
+    "website_url": "https://campus.pingan.com",
+    "website_text": "campus.pingan.com"
+  },
+  {
+    "row_num": 1468,
+    "company_name": "光大银行 CEB",
+    "locations": "北京",
+    "website_url": "https://www.cebbank.com",
+    "website_text": "www.cebbank.com"
+  },
+  {
+    "row_num": 1469,
+    "company_name": "广发银行 CGB",
+    "locations": "广州",
+    "website_url": "https://www.cgbchina.com.cn",
+    "website_text": "www.cgbchina.com.cn"
+  },
+  {
+    "row_num": 1470,
+    "company_name": "浙商银行 CZB",
+    "locations": "杭州",
+    "website_url": "https://www.czbank.com",
+    "website_text": "www.czbank.com"
+  },
+  {
+    "row_num": 1471,
+    "company_name": "恒丰银行",
+    "locations": "济南",
+    "website_url": "https://www.hfbank.com.cn",
+    "website_text": "www.hfbank.com.cn"
+  },
+  {
+    "row_num": 1472,
+    "company_name": "中国银河证券",
+    "locations": "北京",
+    "website_url": "https://www.chinastock.com.cn",
+    "website_text": "www.chinastock.com.cn"
+  },
+  {
+    "row_num": 1473,
+    "company_name": "中信证券 CITIC Securities",
+    "locations": "北京/深圳",
+    "website_url": "https://www.citics.com",
+    "website_text": "www.citics.com"
+  },
+  {
+    "row_num": 1474,
+    "company_name": "华泰证券 Huatai Securities",
+    "locations": "南京/上海",
+    "website_url": "https://www.htsc.com.cn",
+    "website_text": "www.htsc.com.cn"
+  },
+  {
+    "row_num": 1475,
+    "company_name": "中金公司 CICC",
+    "locations": "北京",
+    "website_url": "https://www.cicc.com",
+    "website_text": "www.cicc.com"
+  },
+  {
+    "row_num": 1476,
+    "company_name": "申万宏源证券",
+    "locations": "上海",
+    "website_url": "https://www.swhysc.com",
+    "website_text": "www.swhysc.com"
+  },
+  {
+    "row_num": 1477,
+    "company_name": "招商证券",
+    "locations": "深圳",
+    "website_url": "https://www.cmschina.com",
+    "website_text": "www.cmschina.com"
+  },
+  {
+    "row_num": 1478,
+    "company_name": "广发证券 GF Securities",
+    "locations": "广州",
+    "website_url": "https://www.gf.com.cn",
+    "website_text": "www.gf.com.cn"
+  },
+  {
+    "row_num": 1479,
+    "company_name": "东方证券 Orient Securities",
+    "locations": "上海",
+    "website_url": "https://www.dfzq.com.cn",
+    "website_text": "www.dfzq.com.cn"
+  },
+  {
+    "row_num": 1480,
+    "company_name": "兴业证券",
+    "locations": "福州/上海",
+    "website_url": "https://www.xyzq.com.cn",
+    "website_text": "www.xyzq.com.cn"
+  },
+  {
+    "row_num": 1481,
+    "company_name": "中国人保 PICC",
+    "locations": "北京",
+    "website_url": "https://www.picc.com",
+    "website_text": "www.picc.com"
+  },
+  {
+    "row_num": 1482,
+    "company_name": "中国平安 Ping An",
+    "locations": "深圳",
+    "website_url": "https://campus.pingan.com",
+    "website_text": "campus.pingan.com"
+  },
+  {
+    "row_num": 1483,
+    "company_name": "中国太保 CPIC",
+    "locations": "上海",
+    "website_url": "https://www.cpic.com.cn",
+    "website_text": "www.cpic.com.cn"
+  },
+  {
+    "row_num": 1484,
+    "company_name": "新华保险 NCI",
+    "locations": "北京",
+    "website_url": "https://www.newchinalife.com",
+    "website_text": "www.newchinalife.com"
+  },
+  {
+    "row_num": 1485,
+    "company_name": "泰康保险 Taikang",
+    "locations": "北京",
+    "website_url": "https://www.taikang.com",
+    "website_text": "www.taikang.com"
+  },
+  {
+    "row_num": 1486,
+    "company_name": "阳光保险",
+    "locations": "北京",
+    "website_url": "https://www.sinosig.com",
+    "website_text": "www.sinosig.com"
+  },
+  {
+    "row_num": 1487,
+    "company_name": "中国再保险 China Re",
+    "locations": "北京",
+    "website_url": "https://www.chinare.com.cn",
+    "website_text": "www.chinare.com.cn"
+  },
+  {
+    "row_num": 1488,
+    "company_name": "上海证券交易所 SSE",
+    "locations": "上海",
+    "website_url": "https://www.sse.com.cn",
+    "website_text": "www.sse.com.cn"
+  },
+  {
+    "row_num": 1489,
+    "company_name": "深圳证券交易所 SZSE",
+    "locations": "深圳",
+    "website_url": "https://www.szse.cn",
+    "website_text": "www.szse.cn"
+  },
+  {
+    "row_num": 1490,
+    "company_name": "中国银联 UnionPay",
+    "locations": "上海",
+    "website_url": "https://www.unionpay.com",
+    "website_text": "www.unionpay.com"
+  },
+  {
+    "row_num": 1491,
+    "company_name": "蚂蚁集团 Ant Group",
+    "locations": "杭州",
+    "website_url": "https://www.antgroup.com",
+    "website_text": "www.antgroup.com"
+  },
+  {
+    "row_num": 1492,
+    "company_name": "微众银行 WeBank",
+    "locations": "深圳",
+    "website_url": "https://www.webank.com",
+    "website_text": "www.webank.com"
+  },
+  {
+    "row_num": 1493,
+    "company_name": "网商银行 MYbank",
+    "locations": "杭州",
+    "website_url": "https://www.mybank.cn",
+    "website_text": "www.mybank.cn"
+  },
+  {
+    "row_num": 1494,
+    "company_name": "百信银行 aiBank",
+    "locations": "北京",
+    "website_url": "https://www.aibank.com",
+    "website_text": "www.aibank.com"
+  },
+  {
+    "row_num": 1495,
+    "company_name": "中国科学院 CAS",
+    "locations": "北京/上海/合肥/南京等",
+    "website_url": "https://www.cas.cn",
+    "website_text": "www.cas.cn"
+  },
+  {
+    "row_num": 1496,
+    "company_name": "中国工程院 CAE",
+    "locations": "北京",
+    "website_url": "https://www.cae.cn",
+    "website_text": "www.cae.cn"
+  },
+  {
+    "row_num": 1497,
+    "company_name": "中国社科院 CASS",
+    "locations": "北京",
+    "website_url": "https://www.cass.cn",
+    "website_text": "www.cass.cn"
+  },
+  {
+    "row_num": 1498,
+    "company_name": "中科院计算所 ICT",
+    "locations": "北京",
+    "website_url": "https://www.ict.ac.cn",
+    "website_text": "www.ict.ac.cn"
+  },
+  {
+    "row_num": 1499,
+    "company_name": "中科院自动化所",
+    "locations": "北京",
+    "website_url": "https://www.ia.ac.cn",
+    "website_text": "www.ia.ac.cn"
+  },
+  {
+    "row_num": 1500,
+    "company_name": "中科院软件所 ISCAS",
+    "locations": "北京",
+    "website_url": "https://www.iscas.ac.cn",
+    "website_text": "www.iscas.ac.cn"
+  },
+  {
+    "row_num": 1501,
+    "company_name": "中科院微电子所",
+    "locations": "北京",
+    "website_url": "https://www.ime.ac.cn",
+    "website_text": "www.ime.ac.cn"
+  },
+  {
+    "row_num": 1502,
+    "company_name": "中科院半导体所",
+    "locations": "北京",
+    "website_url": "https://www.semi.ac.cn",
+    "website_text": "www.semi.ac.cn"
+  },
+  {
+    "row_num": 1503,
+    "company_name": "北京量子院 BAQIS",
+    "locations": "北京",
+    "website_url": "https://www.baqis.ac.cn",
+    "website_text": "www.baqis.ac.cn"
+  },
+  {
+    "row_num": 1504,
+    "company_name": "之江实验室",
+    "locations": "杭州",
+    "website_url": "https://www.zhejianglab.com",
+    "website_text": "www.zhejianglab.com"
+  },
+  {
+    "row_num": 1505,
+    "company_name": "鹏城实验室",
+    "locations": "深圳",
+    "website_url": "https://www.pcl.ac.cn",
+    "website_text": "www.pcl.ac.cn"
+  },
+  {
+    "row_num": 1506,
+    "company_name": "紫金山实验室",
+    "locations": "南京",
+    "website_url": "https://www.pmlabs.com.cn",
+    "website_text": "www.pmlabs.com.cn"
+  },
+  {
+    "row_num": 1507,
+    "company_name": "合肥国家实验室",
+    "locations": "合肥",
+    "website_url": "https://www.nchl.ac.cn",
+    "website_text": "www.nchl.ac.cn"
+  },
+  {
+    "row_num": 1508,
+    "company_name": "上海人工智能实验室",
+    "locations": "上海",
+    "website_url": "https://www.shlab.org.cn",
+    "website_text": "www.shlab.org.cn"
+  },
+  {
+    "row_num": 1509,
+    "company_name": "北京智源研究院 BAAI",
+    "locations": "北京",
+    "website_url": "https://www.baai.ac.cn",
+    "website_text": "www.baai.ac.cn"
+  },
+  {
+    "row_num": 1510,
+    "company_name": "IDEA研究院",
+    "locations": "深圳",
+    "website_url": "https://www.idea.edu.cn",
+    "website_text": "www.idea.edu.cn"
+  },
+  {
+    "row_num": 1511,
+    "company_name": "中国信息通信研究院 CAICT",
+    "locations": "北京",
+    "website_url": "https://www.caict.ac.cn",
+    "website_text": "www.caict.ac.cn"
+  },
+  {
+    "row_num": 1512,
+    "company_name": "中国标准化研究院",
+    "locations": "北京",
+    "website_url": "https://www.cnis.ac.cn",
+    "website_text": "www.cnis.ac.cn"
+  },
+  {
+    "row_num": 1513,
+    "company_name": "中国计量科学研究院 NIM",
+    "locations": "北京",
+    "website_url": "https://www.nim.ac.cn",
+    "website_text": "www.nim.ac.cn"
+  },
+  {
+    "row_num": 1514,
+    "company_name": "中国环境科学研究院",
+    "locations": "北京",
+    "website_url": "https://www.craes.cn",
+    "website_text": "www.craes.cn"
+  },
+  {
+    "row_num": 1515,
+    "company_name": "中国疾控中心 CDC",
+    "locations": "北京",
+    "website_url": "https://www.chinacdc.cn",
+    "website_text": "www.chinacdc.cn"
+  },
+  {
+    "row_num": 1516,
+    "company_name": "中国食品药品检定研究院",
+    "locations": "北京",
+    "website_url": "https://www.nifdc.org.cn",
+    "website_text": "www.nifdc.org.cn"
+  },
+  {
+    "row_num": 1517,
+    "company_name": "中国水利水电科学研究院",
+    "locations": "北京",
+    "website_url": "https://www.iwhr.com",
+    "website_text": "www.iwhr.com"
+  },
+  {
+    "row_num": 1518,
+    "company_name": "中国电力科学研究院",
+    "locations": "北京",
+    "website_url": "https://www.epri.sgcc.com.cn",
+    "website_text": "www.epri.sgcc.com.cn"
+  },
+  {
+    "row_num": 1519,
+    "company_name": "中国航天科技集团一院",
+    "locations": "北京",
+    "website_url": "https://www.calt.com",
+    "website_text": "www.calt.com"
+  },
+  {
+    "row_num": 1520,
+    "company_name": "中国航天科工二院",
+    "locations": "北京",
+    "website_url": "https://www.fy2y.com",
+    "website_text": "www.fy2y.com"
+  },
+  {
+    "row_num": 1521,
+    "company_name": "中国人民银行征信中心",
+    "locations": "北京/上海",
+    "website_url": "https://www.pbccrc.org.cn",
+    "website_text": "www.pbccrc.org.cn"
+  },
+  {
+    "row_num": 1522,
+    "company_name": "新华社",
+    "locations": "北京",
+    "website_url": "https://www.xinhuanet.com",
+    "website_text": "www.xinhuanet.com"
+  },
+  {
+    "row_num": 1523,
+    "company_name": "人民日报社",
+    "locations": "北京",
+    "website_url": "https://www.people.com.cn",
+    "website_text": "www.people.com.cn"
+  },
+  {
+    "row_num": 1524,
+    "company_name": "中央广播电视总台 CMG",
+    "locations": "北京",
+    "website_url": "https://www.cctv.com",
+    "website_text": "www.cctv.com"
+  }
+]

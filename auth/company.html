@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-40 -40 180 180%27><circle cx=%2750%27 cy=%2750%27 r=%2780%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2760%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2720%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%278%27 fill=%27%23ef4444%27/></svg>">
+<title id="pageTitle">企业详情 — 招聘信息网</title>
+<meta name="description" content="查看企业实习招聘详情，含岗位方向、面向对象、投递链接等完整信息">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="/auth/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="招聘信息">
+<meta name="theme-color" content="#2563eb">
+<!-- WeChat -->
+<meta itemprop="name" content="🎯 2027-2029届实习招聘信息大全">
+<meta itemprop="description" content="覆盖23大行业1000+企业暑期实习，含完整投递链接。新用户3天免费试用。">
+<meta itemprop="image" content="https://zhenningyu.top/og-image.png">
+<style>
+  .detail-container { max-width:800px; margin:20px auto; padding:0 20px; }
+  .detail-card { background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:28px; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .detail-card h1 { font-size:1.5em; margin-bottom:6px; }
+  .detail-meta { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+  .detail-section { margin:18px 0; }
+  .detail-section h3 { font-size:.95em; color:var(--text2); margin-bottom:6px; border-bottom:1px solid var(--border); padding-bottom:6px; }
+  .detail-section p { font-size:.9em; line-height:1.7; }
+  .detail-links { display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; }
+  .detail-links a { display:inline-block; padding:10px 22px; border-radius:8px; font-weight:600; text-decoration:none; font-size:.88em; transition:all .2s; }
+  .detail-links a.btn-apply { background:var(--accent); color:#fff; }
+  .detail-links a.btn-apply:hover { background:#1d4ed8; }
+  .detail-links a.btn-website { background:#fff; color:var(--text); border:1px solid var(--border); }
+  .detail-links a.btn-website:hover { border-color:var(--accent); color:var(--accent); }
+  .detail-back { margin-bottom:16px; }
+  .detail-back a { color:var(--text2); text-decoration:none; font-size:.85em; }
+  .detail-back a:hover { color:var(--accent); }
+  .masked-blur { filter:blur(5px); user-select:none; }
+  .login-prompt { text-align:center; padding:24px; background:var(--tag-bg); border-radius:10px; margin:16px 0; }
+  .login-prompt a { color:var(--accent); font-weight:700; }
+  .related-companies { margin-top:24px; }
+  .related-companies h3 { font-size:.95em; margin-bottom:10px; }
+  .related-companies .mini-row { display:flex; gap:8px; flex-wrap:wrap; }
+  .related-companies .mini-row a { font-size:.82em; padding:4px 12px; border:1px solid var(--border); border-radius:14px; text-decoration:none; color:var(--text2); transition:all .18s; }
+  .related-companies .mini-row a:hover { border-color:var(--accent); color:var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links" id="navLinks">
+    <a href="/">🏠 首页</a>
+    <a href="/auth/login">登录</a>
+  </div>
+</nav>
+
+<div class="detail-container">
+  <div class="detail-back"><a href="/">← 返回招聘列表</a></div>
+  <div class="detail-card" id="detailCard">
+    <div class="loading"><div class="loading-spinner"></div><p>加载中...</p></div>
+  </div>
+  <div class="related-companies" id="relatedCompanies" style="display:none;">
+    <h3>📌 同地区其他企业</h3>
+    <div class="mini-row" id="relatedList"></div>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/auth/js/api.js';
+
+const API_BASE = window.API_BASE_URL || '';
+
+async function loadCompanyDetail() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+  if (!id) {
+    document.getElementById('detailCard').innerHTML = '<div class="no-result">未指定企业ID</div>';
+    return;
+  }
+
+  const card = document.getElementById('detailCard');
+
+  // Fetch detail
+  const resp = await fetch(`${API_BASE}/api/v1/companies/detail?id=${encodeURIComponent(id)}`, {
+    headers: api.getAuthHeaders ? api.getAuthHeaders() : {},
+  });
+  const result = await resp.json();
+
+  if (!result.success) {
+    card.innerHTML = `<div class="no-result">${result.message || '加载失败'}</div>`;
+    return;
+  }
+
+  const c = result.data.company;
+  document.getElementById('pageTitle').textContent = `${c.company_name} — 实习招聘详情 — 招聘信息网`;
+
+  const tags = parseTags(c.tags_json);
+  const tagsHtml = tags.map(t => {
+    let cls = 'tag';
+    if (t.includes('热招')) cls += ' hot';
+    if (t.includes('转正') || t.includes('留用')) cls += ' green';
+    if (t.includes('截止')) cls += ' orange';
+    return `<span class="${cls}">${t}</span>`;
+  }).join('');
+
+  const isFull = c.isFull;
+
+  card.innerHTML = `
+    <h1>${esc(c.company_name)}</h1>
+    <div class="detail-meta">
+      <span style="color:#d97706;font-weight:600;">📍 ${esc(c.locations)}</span>
+      <span>${tagsHtml}</span>
+    </div>
+
+    ${isFull ? `
+      <div class="detail-section">
+        <h3>👥 面向对象</h3>
+        <p>${esc(c.target_audience) || '暂无信息'}</p>
+      </div>
+      <div class="detail-section">
+        <h3>💼 岗位方向</h3>
+        <p>${esc(c.job_positions) || '暂无信息'}</p>
+      </div>
+      <div class="detail-section">
+        <h3>📝 职位描述</h3>
+        <p>${esc(c.description) || '暂无信息'}</p>
+      </div>
+    ` : `
+      <div class="login-prompt">
+        <p>🔒 登录后查看完整岗位信息</p>
+        <p><a href="/auth/login">立即登录</a> · <a href="/auth/register">免费注册</a></p>
+      </div>
+    `}
+
+    <div class="detail-links">
+      ${(c.apply_url && c.apply_url.startsWith('http')) ? `<a class="btn-apply" href="${esc(c.apply_url)}" target="_blank" rel="noopener">📨 立即投递</a>` : ''}
+      ${(c.website_url && c.website_url.startsWith('http')) ? `<a class="btn-website" href="${esc(c.website_url)}" target="_blank" rel="noopener">🏢 ${esc(c.website_text || '企业官网')}</a>` : ''}
+    </div>
+  `;
+
+  // Update navbar
+  if (api.isLoggedIn && api.isLoggedIn()) {
+    document.getElementById('navLinks').innerHTML = `
+      <a href="/auth/dashboard">📋 完整信息</a>
+      <a href="/auth/payment">💳 订阅管理</a>
+    `;
+  }
+
+  // Load related companies from same city
+  loadRelated(c.locations, c.id);
+}
+
+function loadRelated(locations, currentId) {
+  const cacheKey = 'recruit_data_v2';
+  const cached = localStorage.getItem(cacheKey);
+  if (!cached) return;
+  try {
+    const parsed = JSON.parse(cached);
+    const companies = parsed.data || [];
+    const firstCity = (locations || '').split('/')[0].trim();
+    const related = companies.filter(c => c.id !== currentId && c.locations && c.locations.includes(firstCity)).slice(0, 8);
+    if (related.length === 0) return;
+
+    const container = document.getElementById('relatedCompanies');
+    const list = document.getElementById('relatedList');
+    list.innerHTML = related.map(c => `<a href="/auth/company.html?id=${c.id}">${esc(c.company_name)}</a>`).join('');
+    container.style.display = 'block';
+  } catch(e) {}
+}
+
+function parseTags(tagsJson) {
+  try { return JSON.parse(tagsJson); } catch { return []; }
+}
+function esc(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+loadCompanyDetail();
+</script>
+
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js")</script>
+</body>
+</html>

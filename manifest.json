@@ -1,0 +1,25 @@
+{
+  "name": "招聘信息网",
+  "short_name": "招聘信息",
+  "description": "2027-2029届实习招聘信息大全，1000+企业暑期实习岗位汇总",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 192 192%27><rect width=%27192%27 height=%27192%27 rx=%2736%27 fill=%27%232563eb%27/><circle cx=%2796%27 cy=%2796%27 r=%2770%27 fill=%27none%27 stroke=%27white%27 stroke-width=%278%27/><circle cx=%2796%27 cy=%2796%27 r=%2746%27 fill=%27none%27 stroke=%27white%27 stroke-width=%278%27/><circle cx=%2796%27 cy=%2796%27 r=%2722%27 fill=%27none%27 stroke=%27white%27 stroke-width=%278%27/><circle cx=%2796%27 cy=%2796%27 r=%276%27 fill=%27%23ef4444%27/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 512 512%27><rect width=%27512%27 height=%27512%27 rx=%2796%27 fill=%27%232563eb%27/><circle cx=%27256%27 cy=%27256%27 r=%27180%27 fill=%27none%27 stroke=%27white%27 stroke-width=%2720%27/><circle cx=%27256%27 cy=%27256%27 r=%27120%27 fill=%27none%27 stroke=%27white%27 stroke-width=%2720%27/><circle cx=%27256%27 cy=%27256%27 r=%2760%27 fill=%27none%27 stroke=%27white%27 stroke-width=%2720%27/><circle cx=%27256%27 cy=%27256%27 r=%2716%27 fill=%27%23ef4444%27/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

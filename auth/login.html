@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-40 -40 180 180%27><circle cx=%2750%27 cy=%2750%27 r=%2780%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2760%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2720%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%278%27 fill=%27%23ef4444%27/></svg>">
+<title>登录 — 招聘信息网</title>
+<link rel="stylesheet" href="/auth/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="招聘信息">
+<meta name="theme-color" content="#2563eb">
+<!-- WeChat -->
+<meta itemprop="name" content="🎯 2027-2029届实习招聘信息大全">
+<meta itemprop="description" content="覆盖23大行业1000+企业暑期实习，含完整投递链接。新用户3天免费试用。">
+<meta itemprop="image" content="https://zhenningyu.top/og-image.png">
+<style>
+  .forgot-link { font-size:.78em; text-align:right; margin-top:-8px; margin-bottom:16px; }
+  .forgot-link a { color:var(--text2); text-decoration:underline; cursor:pointer; }
+  #resetSection { display:none; border-top:1px solid var(--border); padding-top:20px; margin-top:20px; }
+  #resetSection h3 { font-size:1em; margin-bottom:4px; }
+  #resetSection .sub { font-size:.8em; color:var(--text2); margin-bottom:16px; }
+  .code-row { display:flex; gap:8px; align-items:flex-end; }
+  .code-row input { flex:1; }
+  .code-row button { flex-shrink:0; white-space:nowrap; padding:10px 14px; font-size:.85em; }
+  .btn-code { background:var(--accent); color:#fff; border:none; border-radius:8px; cursor:pointer; }
+  .btn-code:disabled { opacity:0.5; cursor:not-allowed; }
+  .btn-back { background:none; border:none; color:var(--accent); cursor:pointer; font-size:.85em; text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/auth/register.html" class="btn-nav">免费注册</a>
+  </div>
+</nav>
+
+<div class="auth-page">
+  <div class="auth-card" id="loginCard">
+    <h2>👋 欢迎回来</h2>
+    <p class="sub">登录查看完整招聘信息</p>
+
+    <div id="errorBox" class="error-msg" style="display:none;"></div>
+    <div id="successBox" class="success-msg" style="display:none;"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label>📧 邮箱地址</label>
+        <input type="email" id="email" placeholder="your@email.com" required autofocus>
+      </div>
+      <div class="form-group">
+        <label>🔒 密码</label>
+        <input type="password" id="password" placeholder="输入密码" required>
+      </div>
+      <div class="forgot-link"><a id="showResetLink">忘记密码？</a></div>
+      <button type="submit" class="btn-full primary" id="submitBtn">登录</button>
+    </form>
+
+    <p class="alt-link">还没有账号？<a href="/auth/register.html">免费注册（享3天试用）</a></p>
+
+    <!-- Reset Password Section -->
+    <div id="resetSection">
+      <h3>🔑 重置密码</h3>
+      <p class="sub">输入注册邮箱，我们将发送验证码</p>
+      <div class="form-group">
+        <label>📧 注册邮箱</label>
+        <div class="code-row">
+          <input type="email" id="resetEmail" placeholder="your@email.com">
+          <button type="button" id="sendResetBtn" class="btn-code">发送验证码</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>🔐 验证码</label>
+        <input type="text" id="resetCode" placeholder="6位数字验证码" maxlength="6" inputmode="numeric" autocomplete="one-time-code">
+      </div>
+      <div class="form-group">
+        <label>🔒 新密码</label>
+        <input type="password" id="resetPassword" placeholder="至少8个字符" minlength="8">
+      </div>
+      <div class="form-group">
+        <label>🔒 确认新密码</label>
+        <input type="password" id="resetConfirm" placeholder="再次输入新密码" minlength="8">
+      </div>
+      <button type="button" class="btn-full primary" id="resetBtn">重置密码</button>
+      <p style="text-align:center;margin-top:12px;"><button type="button" class="btn-back" id="backToLoginBtn">← 返回登录</button></p>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/auth/js/api.js';
+
+// ──── Login ────
+const form = document.getElementById('loginForm');
+const errorBox = document.getElementById('errorBox');
+const successBox = document.getElementById('successBox');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  errorBox.style.display = 'none';
+  if (!email || !password) { showError('请填写邮箱和密码'); return; }
+  submitBtn.disabled = true; submitBtn.textContent = '登录中...';
+  const result = await api.login(email, password);
+  if (result.success) { window.location.href = '/auth/dashboard'; }
+  else { showError(result.message); submitBtn.disabled = false; submitBtn.textContent = '登录'; }
+});
+
+function showError(msg) { errorBox.textContent = msg; errorBox.style.display = 'block'; successBox.style.display = 'none'; }
+function showSuccess(msg) { successBox.textContent = msg; successBox.style.display = 'block'; errorBox.style.display = 'none'; }
+
+// ──── Forgot Password ────
+const resetSection = document.getElementById('resetSection');
+const loginForm = document.getElementById('loginForm');
+const showResetLink = document.getElementById('showResetLink');
+const backToLoginBtn = document.getElementById('backToLoginBtn');
+
+showResetLink.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+  resetSection.style.display = 'block';
+  document.getElementById('resetEmail').value = document.getElementById('email').value;
+  document.querySelector('#loginCard h2').textContent = '🔑 重置密码';
+  document.querySelector('#loginCard .sub').textContent = '通过邮箱验证重置你的密码';
+  errorBox.style.display = 'none';
+  successBox.style.display = 'none';
+});
+
+backToLoginBtn.addEventListener('click', () => {
+  loginForm.style.display = 'block';
+  resetSection.style.display = 'none';
+  document.querySelector('#loginCard h2').textContent = '👋 欢迎回来';
+  document.querySelector('#loginCard .sub').textContent = '登录查看完整招聘信息';
+  errorBox.style.display = 'none';
+  successBox.style.display = 'none';
+});
+
+// Send reset code
+let resetCountdown = 0, resetTimer = null;
+document.getElementById('sendResetBtn').addEventListener('click', async () => {
+  const email = document.getElementById('resetEmail').value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('请输入有效的邮箱地址'); return; }
+  const btn = document.getElementById('sendResetBtn');
+  btn.disabled = true; btn.textContent = '发送中...';
+  const result = await api.forgotPassword(email);
+  if (result.success) {
+    var code = result.data && result.data.code;
+    showSuccess('验证码：<span style=\"font-size:1.4em;font-weight:700;letter-spacing:3px;\">' + (code || '已发送') + '</span>（10分钟内有效）');
+    resetCountdown = 60; updateResetCountdown();
+  }
+  else { showError(result.message); btn.disabled = false; btn.textContent = '发送验证码'; }
+});
+
+function updateResetCountdown() {
+  const btn = document.getElementById('sendResetBtn');
+  if (resetCountdown <= 0) { clearInterval(resetTimer); btn.disabled = false; btn.textContent = '重新发送'; return; }
+  btn.textContent = resetCountdown + 's后重发'; resetCountdown--;
+  if (!resetTimer) resetTimer = setInterval(updateResetCountdown, 1000);
+}
+
+// Reset password
+document.getElementById('resetBtn').addEventListener('click', async () => {
+  const email = document.getElementById('resetEmail').value.trim();
+  const code = document.getElementById('resetCode').value.trim();
+  const pw = document.getElementById('resetPassword').value;
+  const cpw = document.getElementById('resetConfirm').value;
+
+  if (!email || !code || !pw || !cpw) { showError('请填写所有字段'); return; }
+  if (code.length !== 6 || !/^\d{6}$/.test(code)) { showError('请输入6位数字验证码'); return; }
+  if (pw.length < 8) { showError('密码至少需要8个字符'); return; }
+  if (pw !== cpw) { showError('两次输入的密码不一致'); return; }
+
+  const btn = document.getElementById('resetBtn');
+  btn.disabled = true; btn.textContent = '重置中...';
+  const result = await api.resetPassword(email, code, pw);
+  if (result.success) {
+    showSuccess('密码重置成功！请使用新密码登录');
+    setTimeout(() => { backToLoginBtn.click(); }, 2000);
+  } else { showError(result.message); }
+  btn.disabled = false; btn.textContent = '重置密码';
+});
+</script>
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js")</script>
+</body>
+</html>

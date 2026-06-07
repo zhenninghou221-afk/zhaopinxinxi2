@@ -1,0 +1,33 @@
+name = "recruitment-site"
+main = "_worker.js"
+compatibility_date = "2024-06-01"
+
+# 静态资源绑定 —— 这是解决404的关键
+[assets]
+directory = "./"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# D1 数据库
+[[d1_databases]]
+binding = "DB"
+database_name = "recruitment-db"
+database_id = "b68847cd-bdb6-4497-aee8-b6563dba3209"
+
+# R2 存储
+[[r2_buckets]]
+binding = "PAYMENT_BUCKET"
+bucket_name = "payment-proofs"
+
+# 环境变量
+[vars]
+TRIAL_HOURS = 72
+SUBSCRIPTION_DAYS = 90
+PRICE_CNY = 9.90
+BASE_URL = "https://zhenningyu.top/auth"
+RESEND_DOMAIN = "resend.dev"
+
+# 密钥 —— 下面两个通过 wrangler secret put 设置
+# JWT_SECRET (已设置)
+# ADMIN_PASSWORD (需要设置！管理员密码)
+# RESEND_API_KEY (需要设置)

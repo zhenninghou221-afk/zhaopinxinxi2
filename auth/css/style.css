@@ -14,13 +14,6 @@
   --tag-bg: #eff6ff;
   --tag-text: #2563eb;
   --row-hover: #f0f4ff;
-.search-chips-row { display:flex; flex-wrap:nowrap; gap:4px; overflow-x:auto; padding-bottom:4px; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
-.search-chips-row::-webkit-scrollbar { height:4px; }
-.search-chips-row::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:2px; }
-.search-chip { flex-shrink:0; white-space:nowrap; cursor:pointer; padding:3px 10px; border-radius:12px; font-size:.72em; border:1px solid var(--border); background:var(--bg); color:var(--text2); transition:all .15s; }
-.search-chip:hover, .search-chip.active { border-color:var(--accent); color:var(--accent); background:var(--tag-bg); }
-.search-chip-cat { flex-shrink:0; font-size:.68em; color:var(--text2); font-weight:700; padding:3px 4px 3px 0; }
-
   --success: #16a34a;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -278,21 +271,70 @@ body {
   white-space: nowrap;
 }
 
+/* ── Autocomplete dropdown ── */
+.search-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+  z-index: 300;
+  max-height: 280px;
+  overflow-y: auto;
+  display: none;
+}
+.search-autocomplete.show { display: block; }
+.search-autocomplete .ac-item {
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: .85em;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .12s;
+}
+.search-autocomplete .ac-item:last-child { border-bottom: none; }
+.search-autocomplete .ac-item:hover,
+.search-autocomplete .ac-item.active {
+  background: var(--row-hover);
+  color: var(--accent);
+}
+.search-autocomplete .ac-item .ac-name { font-weight: 600; color: #0f172a; }
+.search-autocomplete .ac-item .ac-loc { font-size: .8em; color: #d97706; }
+.search-autocomplete .ac-item:hover .ac-name { color: var(--accent); }
+.search-autocomplete .ac-empty {
+  padding: 14px 18px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: .82em;
+}
+
 .search-chips {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  align-items: center;
-  max-width: 900px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
 }
 
 .search-chips-row {
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  gap: 5px;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
+.search-chips-row::-webkit-scrollbar { height: 4px; }
+.search-chips-row::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
 
 .search-chip-group {
   display: flex;
@@ -311,6 +353,7 @@ body {
 }
 
 .search-chip {
+  flex-shrink: 0;
   font-size: .72em;
   padding: 5px 13px;
   border-radius: 14px;
@@ -834,10 +877,6 @@ body {
   color: #1677ff;
 }
 
-.qr-card.wechat .label {
-  color: #07c160;
-}
-
 .upload-section {
   margin: 20px 0;
   padding: 20px;
@@ -1033,6 +1072,43 @@ body {
   cursor: not-allowed;
 }
 
+/* ═══════════ BACK TO TOP ═══════════ */
+#backToTopBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  z-index: 999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--accent);
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .25s, transform .25s;
+}
+#backToTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#backToTopBtn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(37,99,235,.3);
+}
+@media (prefers-color-scheme: dark) {
+  #backToTopBtn {
+    box-shadow: 0 2px 12px rgba(0,0,0,.4);
+  }
+}
+
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 800px) {
   .hero h1 {
@@ -1078,3 +1154,4 @@ body {
     align-items: center;
   }
 }
+

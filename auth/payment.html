@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-40 -40 180 180%27><circle cx=%2750%27 cy=%2750%27 r=%2780%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2760%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%232563eb%27/><circle cx=%2750%27 cy=%2750%27 r=%2720%27 fill=%27%23eff6ff%27/><circle cx=%2750%27 cy=%2750%27 r=%278%27 fill=%27%23ef4444%27/></svg>">
+<title>订阅管理 — 招聘信息网</title>
+<link rel="stylesheet" href="/auth/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="招聘信息">
+<meta name="theme-color" content="#2563eb">
+<!-- WeChat -->
+<meta itemprop="name" content="🎯 2027-2029届实习招聘信息大全">
+<meta itemprop="description" content="覆盖23大行业1000+企业暑期实习，含完整投递链接。新用户3天免费试用。">
+<meta itemprop="image" content="https://zhenningyu.top/og-image.png">
+<style>
+  .pay-btns { display:flex; gap:12px; justify-content:center; margin:16px 0; flex-wrap:wrap; }
+  .pay-btn { padding:10px 24px; border-radius:8px; border:none; cursor:pointer; font-size:.9em; font-weight:600; color:#fff; }
+  .pay-btn.alipay-btn { background:#1677ff; }
+  .modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6); z-index:999; justify-content:center; align-items:center; }
+  .modal-overlay.show { display:flex; }
+  .modal-box { background:#fff; border-radius:12px; padding:24px; text-align:center; max-width:300px; }
+  .modal-box img { width:200px; height:200px; }
+  .modal-close { margin-top:12px; padding:8px 24px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; font-size:.85em; }
+
+  /* QR payment section */
+  .qr-container { text-align:center; padding:16px; }
+  .qr-container img { border:2px solid #e5e7eb; border-radius:12px; padding:8px; }
+  .qr-container .order-id { font-size:.82em; color:var(--text2); margin-top:8px; word-break:break-all; }
+  .qr-expire { color:#ef4444; font-size:.82em; margin-top:4px; }
+  .polling-status { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; color:var(--text2); font-size:.85em; }
+  .polling-dot { width:8px; height:8px; border-radius:50%; background:#f59e0b; animation:pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .success-badge { display:inline-flex; align-items:center; gap:6px; background:#ecfdf5; color:#059669; padding:8px 16px; border-radius:8px; font-weight:600; margin:12px 0; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="logo">🎯 招聘信息网</a>
+  <div class="nav-links">
+    <a href="/auth/dashboard">📋 完整信息</a>
+    <a href="/auth/payment.html">💳 订阅管理</a>
+    <a href="/" id="logoutLink">退出</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- Banner -->
+  <div id="subBanner" style="margin-top:12px;"></div>
+
+  <!-- Subscription Status -->
+  <div class="payment-section" id="subscriptionStatus">
+    <div class="loading"><div class="loading-spinner"></div><p>加载中...</p></div>
+  </div>
+
+  <!-- Purchase Section -->
+  <div class="payment-section" id="purchaseSection" style="display:none;">
+    <h3>💳 订阅招聘信息网</h3>
+    <div class="price-tag">
+      <span class="unit">¥</span><span class="amount">9.90</span>
+      <div class="period">/ 3个月</div>
+    </div>
+    <p style="text-align:center;color:var(--text2);">可叠加购买，每次延长3个月有效期</p>
+
+    <button class="btn-full primary" id="createOrderBtn" style="margin-top:16px;">立即购买 — ¥9.90</button>
+  </div>
+
+  <!-- Alipay Dynamic QR Section -->
+  <div class="payment-section" id="alipaySection" style="display:none;">
+    <h3>📱 支付宝扫码支付</h3>
+    <div class="qr-container">
+      <img id="alipayQR" src="" alt="支付二维码" style="width:220px;height:220px;object-fit:contain;">
+      <p id="orderInfo" style="margin-top:8px;font-size:.85em;color:var(--text2);"></p>
+      <p class="qr-expire" id="expireInfo">⏱ 二维码30分钟内有效</p>
+    </div>
+
+    <div class="polling-status" id="pollingStatus">
+      <span class="polling-dot"></span>
+      <span id="pollingText">等待支付中...</span>
+    </div>
+
+    <div id="paySuccess" style="display:none;text-align:center;">
+      <div class="success-badge">✅ 支付成功！订阅已自动开通</div>
+      <button class="btn-full primary" onclick="window.location.href='/auth/dashboard'">📋 查看完整招聘信息</button>
+    </div>
+
+    <div class="alert tips" style="margin:16px 0;">
+      <strong>📌 支付说明：</strong><br>
+      ① 使用支付宝扫描上方二维码支付<br>
+      ② 支付成功后<b>自动开通</b>，无需上传截图<br>
+      ③ 如遇问题，请截图联系客服
+    </div>
+  </div>
+
+  <!-- Fallback: Manual QR + Self-Confirm (when Alipay not configured) -->
+  <div class="payment-section" id="manualSection" style="display:none;">
+    <h3>📱 扫码支付</h3>
+    <p style="text-align:center;color:var(--text2);" id="manualOrderInfo"></p>
+
+    <div class="pay-btns">
+      <button class="pay-btn alipay-btn" onclick="showQR()">支付宝 付款</button>
+    </div>
+
+    <div class="modal-overlay" id="qrModal" onclick="if(event.target===this)hideQR()">
+      <div class="modal-box">
+        <img id="qrImage" src="" alt="收款码" style="width:200px;height:200px;object-fit:contain;">
+        <p style="margin-top:8px;font-size:.85em;color:#666;" id="qrLabel"></p>
+        <button class="modal-close" onclick="hideQR()">关闭</button>
+      </div>
+    </div>
+
+    <div class="alert tips" style="margin:16px 0;">
+      <strong>📌 支付说明：</strong><br>
+      ① 扫描上方二维码支付 ¥9.90<br>
+      ② <strong>转账备注中填写订单号</strong><br>
+      ③ 付款完成后点击下方按钮<b>立即开通</b>
+    </div>
+
+    <!-- Self-confirm button -->
+    <div id="selfConfirmArea" style="text-align:center;">
+      <button class="btn-full primary" id="selfConfirmBtn" style="background:#059669;">✅ 我已付款，立即开通订阅</button>
+      <p style="font-size:.76em;color:var(--text2);margin-top:6px;">点击即确认你已完成支付，订阅将立即生效</p>
+    </div>
+
+    <div id="manualSuccess" style="display:none;text-align:center;">
+      <div class="success-badge">✅ 订阅已开通！</div>
+      <button class="btn-full primary" onclick="window.location.href='/auth/dashboard'" style="margin-top:12px;">📋 查看完整招聘信息</button>
+    </div>
+
+    <hr style="margin:20px 0;border-color:#e5e7eb;">
+
+    <!-- Optional: upload screenshot as proof -->
+    <div class="upload-section">
+      <p style="margin-bottom:12px;">📎 可选：上传付款截图（备查）</p>
+      <label class="upload-label" for="proofFile">选择截图文件</label>
+      <input type="file" id="proofFile" accept="image/jpeg,image/png,image/webp,image/gif">
+      <p style="font-size:.76em;color:var(--text2);margin-top:8px;" id="uploadStatus"></p>
+    </div>
+  </div>
+
+  <!-- Payment History -->
+  <div class="payment-section" id="paymentHistorySection">
+    <h3>📋 支付记录</h3>
+    <div id="paymentHistory">
+      <div class="loading"><div class="loading-spinner"></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('logoutLink').addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.removeItem('recruitment_token');
+  localStorage.removeItem('recruitment_user');
+  window.location.href = '/';
+});
+function showQR() {
+  var m = document.getElementById("qrModal");
+  var i = document.getElementById("qrImage");
+  var l = document.getElementById("qrLabel");
+  i.src = "/auth/images/alipay_qr.png"; l.textContent = "支付宝扫码支付 ¥9.90";
+  m.classList.add("show");
+}
+function hideQR() { document.getElementById("qrModal").classList.remove("show"); }
+</script>
+<script type="module">
+import { api } from '/auth/js/api.js';
+
+let currentOrderId = null;
+let pollingTimer = null;
+let pollingCount = 0;
+const MAX_POLLS = 60; // 3 seconds * 60 = 3 minutes, then stop
+
+// ─── Init ───
+async function initPaymentPage() {
+  if (!api.isLoggedIn()) {
+    window.location.href = '/auth/login.html';
+    return;
+  }
+
+  // Load subscription status
+  const subResult = await api.getSubscriptionStatus();
+  if (subResult.success) {
+    renderSubscriptionStatus(subResult.data);
+  }
+
+  // Load payment history
+  const ordersResult = await api.getPaymentOrders();
+  if (ordersResult.success) {
+    renderPaymentHistory(ordersResult.data.orders);
+  }
+}
+
+function renderSubscriptionStatus(sub) {
+  const statusEl = document.getElementById('subscriptionStatus');
+  const purchaseSection = document.getElementById('purchaseSection');
+
+  if (sub.hasAccess) {
+    statusEl.innerHTML = `
+      <div class="banner ${sub.status === 'trial' ? 'trial' : 'active'}">
+        ${sub.status === 'trial' ? '🎁 免费试用中' : '✅ 已订阅'} · ${sub.remaining}
+      </div>
+      <p style="text-align:center;color:var(--text2);">订阅到期后可继续购买延长。每次购买延长90天，可叠加。</p>
+    `;
+  } else {
+    statusEl.innerHTML = `
+      <div class="banner expired">${sub.message}</div>
+    `;
+  }
+
+  if (purchaseSection) purchaseSection.style.display = 'block';
+}
+
+// ─── Create Order ───
+document.getElementById('createOrderBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('createOrderBtn');
+  btn.disabled = true;
+  btn.textContent = '创建订单中...';
+
+  const result = await api.createOrder();
+  if (!result.success) {
+    alert(result.message);
+    btn.disabled = false;
+    btn.textContent = '立即购买 — ¥9.90';
+    return;
+  }
+
+  currentOrderId = result.data.orderId;
+  const payMethod = result.data.payMethod;
+
+  if (payMethod === 'alipay' && result.data.qrUrl) {
+    // ── Alipay dynamic QR mode ──
+    showAlipaySection(result.data);
+    btn.textContent = '重新购买';
+  } else {
+    // ── Manual fallback mode ──
+    showManualSection(result.data);
+    btn.textContent = '重新购买';
+  }
+
+  btn.disabled = false;
+});
+
+function showAlipaySection(data) {
+  document.getElementById('alipaySection').style.display = 'block';
+  document.getElementById('manualSection').style.display = 'none';
+  document.getElementById('paySuccess').style.display = 'none';
+  document.getElementById('pollingStatus').style.display = 'flex';
+  document.getElementById('expireInfo').style.display = 'block';
+
+  // Set QR image
+  document.getElementById('alipayQR').src = data.qrUrl;
+  document.getElementById('orderInfo').textContent =
+    `订单号：${data.orderId} | 金额：¥${data.amount.toFixed(2)}`;
+
+  // Reset and start polling
+  pollingCount = 0;
+  clearInterval(pollingTimer);
+  startPolling(data.orderId);
+}
+
+function showManualSection(data) {
+  document.getElementById('alipaySection').style.display = 'none';
+  document.getElementById('manualSection').style.display = 'block';
+  document.getElementById('manualOrderInfo').textContent =
+    `订单号：${data.orderId} | 金额：¥${data.amount.toFixed(2)}`;
+
+  // Reset self-confirm UI
+  document.getElementById('selfConfirmArea').style.display = 'block';
+  document.getElementById('manualSuccess').style.display = 'none';
+  document.getElementById('selfConfirmBtn').disabled = false;
+  document.getElementById('selfConfirmBtn').textContent = '✅ 我已付款，立即开通订阅';
+  document.getElementById('uploadStatus').textContent = '';
+  document.getElementById('proofFile').value = '';
+}
+
+// ─── Polling ───
+function startPolling(orderId) {
+  const pollText = document.getElementById('pollingText');
+  const pollingStatus = document.getElementById('pollingStatus');
+
+  pollingTimer = setInterval(async () => {
+    pollingCount++;
+
+    if (pollingCount > MAX_POLLS) {
+      clearInterval(pollingTimer);
+      pollText.textContent = '扫码后如未自动开通，请联系客服';
+      pollingStatus.querySelector('.polling-dot').style.background = '#ef4444';
+      return;
+    }
+
+    try {
+      const result = await api.queryPaymentStatus(orderId);
+      if (result.success && result.data.paid) {
+        clearInterval(pollingTimer);
+
+        // Show success state
+        pollingStatus.style.display = 'none';
+        document.getElementById('expireInfo').style.display = 'none';
+        document.getElementById('paySuccess').style.display = 'block';
+
+        // Reload subscription status + history
+        const subResult = await api.getSubscriptionStatus();
+        if (subResult.success) renderSubscriptionStatus(subResult.data);
+
+        const ordersResult = await api.getPaymentOrders();
+        if (ordersResult.success) renderPaymentHistory(ordersResult.data.orders);
+      } else {
+        pollText.textContent = `等待支付中... (已等待 ${pollingCount * 3} 秒)`;
+      }
+    } catch (e) {
+      // Silently retry
+    }
+  }, 3000);
+}
+
+// ─── Upload proof (manual fallback) ───
+document.getElementById('proofFile').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  if (!currentOrderId) {
+    alert('请先创建订单');
+    return;
+  }
+
+  const statusEl = document.getElementById('uploadStatus');
+  statusEl.textContent = '上传中...';
+
+  const result = await api.uploadProof(currentOrderId, file);
+  if (result.success) {
+    statusEl.textContent = '✅ ' + result.message;
+    const ordersResult = await api.getPaymentOrders();
+    if (ordersResult.success) {
+      renderPaymentHistory(ordersResult.data.orders);
+    }
+  } else {
+    statusEl.textContent = '❌ ' + result.message;
+  }
+});
+
+// ─── Self-confirm (manual mode) ───
+document.getElementById('selfConfirmBtn').addEventListener('click', async () => {
+  if (!currentOrderId) {
+    alert('请先创建订单');
+    return;
+  }
+
+  const btn = document.getElementById('selfConfirmBtn');
+  if (!confirm(`确认你已完成支付 ¥9.90 到订单 ${currentOrderId}？\n\n点击确定后订阅将立即开通。请确保你真的已经付款。`)) {
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '开通中...';
+
+  const result = await api.selfConfirm(currentOrderId);
+  if (result.success) {
+    // Hide self-confirm area, show success
+    document.getElementById('selfConfirmArea').style.display = 'none';
+    document.getElementById('manualSuccess').style.display = 'block';
+
+    // Reload subscription status + history
+    const subResult = await api.getSubscriptionStatus();
+    if (subResult.success) renderSubscriptionStatus(subResult.data);
+
+    const ordersResult = await api.getPaymentOrders();
+    if (ordersResult.success) renderPaymentHistory(ordersResult.data.orders);
+  } else {
+    alert(result.message || '开通失败，请稍后重试');
+    btn.disabled = false;
+    btn.textContent = '✅ 我已付款，立即开通订阅';
+  }
+});
+
+// ─── Payment History ───
+function renderPaymentHistory(orders) {
+  const el = document.getElementById('paymentHistory');
+  if (!orders || orders.length === 0) {
+    el.innerHTML = '<p style="text-align:center;color:var(--text2);">暂无支付记录</p>';
+    return;
+  }
+
+  el.innerHTML = `
+    <table>
+      <thead><tr><th>订单号</th><th>金额</th><th>方式</th><th>状态</th><th>时间</th></tr></thead>
+      <tbody>
+        ${orders.map(o => `
+          <tr>
+            <td style="font-size:.75em;">${o.order_id}</td>
+            <td>¥${o.amount.toFixed(2)}</td>
+            <td>${o.payment_method || '-'}</td>
+            <td><span class="status-badge ${o.status}">${statusLabel(o.status)}</span></td>
+            <td style="font-size:.75em;">${o.created_at ? o.created_at.slice(0, 16) : ''}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function statusLabel(s) {
+  const labels = { pending: '待支付', pending_verify: '审核中', completed: '已完成', cancelled: '已取消', expired: '已过期' };
+  return labels[s] || s;
+}
+
+// ─── Cleanup on page leave ───
+window.addEventListener('beforeunload', () => {
+  if (pollingTimer) clearInterval(pollingTimer);
+});
+
+initPaymentPage();
+</script>
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js")</script>
+</body>
+</html>

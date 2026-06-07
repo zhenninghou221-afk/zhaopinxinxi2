@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-with open('登陆注册/payment.html', 'r', encoding='utf-8') as f:
+with open('auth/payment.html', 'r', encoding='utf-8') as f:
     content = f.read()
 
 # Find and replace the QR section
@@ -28,8 +28,7 @@ if start >= 0 and end >= 0:
         end = start + pos + 6
 
     replacement = '''<div class="pay-btns">
-	      <button class="pay-btn alipay-btn" onclick="showQR('alipay')">支付宝 付款</button>
-	      <button class="pay-btn wechat-btn" onclick="showQR('wechat')">微信支付</button>
+	      <button class="pay-btn alipay-btn" onclick="showQR()">支付宝 付款</button>
 	    </div>
 
 	    <div class="modal-overlay" id="qrModal" onclick="if(event.target===this)hideQR()">
@@ -45,17 +44,12 @@ if start >= 0 and end >= 0:
 
     # Add JS functions for modal
     js = '''
-function showQR(type) {
+function showQR() {
   var modal = document.getElementById('qrModal');
   var img = document.getElementById('qrImage');
   var label = document.getElementById('qrLabel');
-  if (type === 'alipay') {
-    img.src = '/登陆注册/images/alipay_qr.png';
-    label.textContent = '支付宝扫码支付 ¥9.90';
-  } else {
-    img.src = '/登陆注册/images/wechat_qr.png';
-    label.textContent = '微信扫码支付 ¥9.90';
-  }
+  img.src = '/auth/images/alipay_qr.png';
+  label.textContent = '支付宝扫码支付 ¥9.90';
   modal.classList.add('show');
 }
 function hideQR() {
@@ -64,7 +58,7 @@ function hideQR() {
 '''
     content = content.replace('initPaymentPage();', js + '\ninitPaymentPage();')
 
-    with open('登陆注册/payment.html', 'w', encoding='utf-8') as f:
+    with open('auth/payment.html', 'w', encoding='utf-8') as f:
         f.write(content)
     print('Payment page updated!')
 else:
